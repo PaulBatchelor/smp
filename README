@@ -1,1 +1,30 @@
-Hello.
+Hello. This is smp, my personal attempt at centralizing
+and curating my sample collection.
+
+It works like this:
+
+Samples are almost exclusively WAV files.
+
+More often then not, samples are in self-contained
+collections.
+
+These collections each have their own folder, and
+are contained their own SQLar file. Due to their size,
+these will mostly exist on external storage mediums.
+
+SQLar archives can be copied over and merged together
+in one giant SQLar archive. This is to be used as a
+centralized location for retrieving samples.
+
+Every file in a SQLar archive gets imported into a WeeWiki
+Zettelkasten (Zet) via the WeeWiki Crate interface. Just
+the filename, not the contents itself.
+
+Once inside the WeeWiki, sample curation can begin. The
+WeeWiki has two main formats to do this. The ZettelKasten
+allows for granular timestamped annotation for individual
+samples. Samples can be arbitrarily linked together and
+placed in groups. The wiki allows for more long-form writing
+and higher level ideas. There is also a Janet scripting
+interface, which can allow the wiki to dynamically display
+things from the zet in HTML form.
