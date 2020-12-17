@@ -4,3 +4,5 @@ catalogue of curated samples.
 
 I'm just getting started, there's not much more to
 say at the moment right now.
+
+Compared to my usual wikis, this one has less automation.
