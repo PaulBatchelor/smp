@@ -6,6 +6,7 @@
 
 (ww-add-link "index" "index.org")
 (ww-add-link "akwf" "akwf/akwf.org")
+(ww-add-link "waveedit" "waveedit/waveedit.org")
 
 (ww-sync)
 (ww-close)
