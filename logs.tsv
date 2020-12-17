@@ -7,3 +7,6 @@
 2020-12-17 22:47:35	cb07b3a2-2f8d-4628-b41b-ae407b6e227f	>this way, I don't have to do tree traversal and shit like that. just make sure messages are tied to this group.
 -	cb07b3a2-2f8d-4628-b41b-ae407b6e227f	#0845a2c7-b25b-4af6-89b2-8f87ba171728
 -	cb07b3a2-2f8d-4628-b41b-ae407b6e227f	#e0e2bc6c-4129-4036-85ad-1a61a7a4d0ca
+2020-12-17 22:50:57	9c831de1-6186-4260-b00c-4548fcddbfb9	>there's no way to check if a entry belongs to exactly *one* of the core groups being exported. so it's very possible to create duplicate entries by mistake. we will cross that bridge when we get there. #updates
+-	9c831de1-6186-4260-b00c-4548fcddbfb9	#0845a2c7-b25b-4af6-89b2-8f87ba171728
+-	9c831de1-6186-4260-b00c-4548fcddbfb9	#cb07b3a2-2f8d-4628-b41b-ae407b6e227f
