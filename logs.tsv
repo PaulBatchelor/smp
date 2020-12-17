@@ -1,0 +1,9 @@
+2020-12-17 22:41:08	0845a2c7-b25b-4af6-89b2-8f87ba171728	@logs
+2020-12-17 22:29:20	a094f508-3dca-4e8a-ba4c-5c8ce6782cad	>yeah, this looks like something I made. will have to listen to this at some point.
+-	a094f508-3dca-4e8a-ba4c-5c8ce6782cad	#45883e68-0f5a-4bd8-ae14-ed923ff806c6
+-	a094f508-3dca-4e8a-ba4c-5c8ce6782cad	#0845a2c7-b25b-4af6-89b2-8f87ba171728
+2020-12-17 22:46:23	e0e2bc6c-4129-4036-85ad-1a61a7a4d0ca	>adding a @logs virtual group to this zet, because it makes exporting an easier problem to solve.
+-	e0e2bc6c-4129-4036-85ad-1a61a7a4d0ca	#0845a2c7-b25b-4af6-89b2-8f87ba171728
+2020-12-17 22:47:35	cb07b3a2-2f8d-4628-b41b-ae407b6e227f	>this way, I don't have to do tree traversal and shit like that. just make sure messages are tied to this group.
+-	cb07b3a2-2f8d-4628-b41b-ae407b6e227f	#0845a2c7-b25b-4af6-89b2-8f87ba171728
+-	cb07b3a2-2f8d-4628-b41b-ae407b6e227f	#e0e2bc6c-4129-4036-85ad-1a61a7a4d0ca

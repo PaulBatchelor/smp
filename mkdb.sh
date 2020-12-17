@@ -9,4 +9,7 @@ zetit akwf
 zetit aw_2010_wav32
 zetit waveedit
 
+echo "importing logs"
+weewiki zet import < logs.tsv
+
 weewiki vacuum
