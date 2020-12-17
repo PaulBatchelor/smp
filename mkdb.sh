@@ -1,11 +1,12 @@
+function zetit() {
+    echo "importing $1"
+    weewiki zet import < $1/zet.tsv
+}
+
 weewiki janet genwiki.janet
 
-echo "importing akwf"
-weewiki zet import < akwf/zet.tsv
+zetit akwf
+zetit aw_2010_wav32
+zetit waveedit
 
-echo "importing aw_2010_wav32"
-weewiki zet import < aw_2010_wav32/zet.tsv
-
-echo "importing waveedit"
-weewiki zet import < waveedit/zet.tsv
 weewiki vacuum
