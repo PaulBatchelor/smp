@@ -1,0 +1,19 @@
+#+TITLE: spectral
+Waveforms with the prefix "spectral".
+* gate
+** TODO gatelin
+** TODO gatelog
+* spm
+** TODO spm_i
+** TODO spm_ilowfreq
+** TODO spm_lina
+** TODO spm_linb
+** TODO spm_linlf
+** TODO spm_log
+* sposc
+** TODO sposc_2lin
+** TODO sposc_2log
+** TODO sposc_lini
+** TODO sposc_linr
+** TODO sposc_logi
+** TODO sposc_logr

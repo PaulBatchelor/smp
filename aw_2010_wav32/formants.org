@@ -1,0 +1,137 @@
+#+PROPERTY: header-args:scheme :results silent :noweb yes
+#+TITLE: Formants
+This to be a page about formant based waveforms.
+* formants.scm
+=formants.scm= is a scheme used to help generate waveform
+filenames for the formant waveforms.
+#+NAME: formants.scm
+#+BEGIN_SRC scheme :tangle formants.scm
+<<top>>
+#+END_SRC
+* sine-based formants
+** filename generator
+All sinusoidal formants are in the folder =formants_sine=,
+and have the format =formants_sine/formant_DD.wav=, where
+"DD" is a number between 1 and 16 (inclusive).
+
+The function =formants-fname-sine= will produce a filename,
+given a number.
+
+There doesn't seem to be any formatted printing facilities
+built into s9 scheme, so I hacked in some zero leftpadding.
+#+NAME: top
+#+BEGIN_SRC scheme
+(define (formants-fname-sine num)
+  (let
+      ((mknum
+        (lambda (n)
+          (if (>= n 10)
+              (number->string n)
+              (begin
+                (string-append "0" (number->string n)))))))
+    (begin
+      (string-append
+       "formants_sine/formant_"
+       (mknum num)
+       ".wav"))))
+#+END_SRC
+** observations
+*** [2020-01-21 Tue 11:22] initial observations
+I just got my XY pad instrument set up and loading these
+wavetables from SQLar. It sounds like they may be ordered
+based on number of harmonics or range of harmonics.
+
+1 felt pretty subtractive saw-y, as does 2.
+
+3 begin sounding vocal-like. I could move the XY pad
+oscillator and to make it say "WOW".
+
+I jumped to 16, and it had a lot of high frequency content
+that could only be appreciated with really low sounds
+(MIDI 24), and audible aliasing occured in the upper
+frequencies.
+
+A part of me thinks it would be worthwhile to build a
+morphing oscillator of 2-3 oscillators using Y for
+position. Would be a good way to compare wavetable
+spectrums relative to one another. I get the sense that
+the true magic of this formant wavetable set is from
+blending them together in this fashion.
+* non-sine based formants
+** filename generator
+non-sine filenames are a bit more complicated than sine. In
+addition to the number, there's also a waveform time, which
+can be one of saw, square, or triangle.
+
+#+NAME: top
+#+BEGIN_SRC scheme
+(define (formants-fname-nonsine type num)
+  (let
+      ((mknum
+        (lambda (n)
+          (if (>= n 10)
+              (number->string n)
+              (begin
+                (string-append "0" (number->string n)))))))
+    (begin
+      (string-append
+       "formants_nonsine/formant_"
+       type "_"
+       (mknum num)
+       ".wav"))))
+#+END_SRC
+** observations
+*** [2020-01-21 Tue 13:48]
+initial thoughts.
+
+like sine, higher the number, the brighter things tend to
+be. These are all very bright and alias very quickly.
+
+The saws have a pretty massive sound for one oscillator.
+At 4, things sound very bright and high pitched, despite
+the NN being low.
+
+The squares sound have more vocal qualities than the saw,
+which doesn't really surprise me considering how the square
+approximates the glottis. I was testing at 4.
+
+The triangle unsurprisingly sounds most similar to the
+sinewaves. I wiggled the triangle around and it has more
+of a critter-like quality to it at 16. Sines are more
+subdued, have bottom.
+
+sine at formant 2 sounds FM-y, while triangle sounds
+more reedy.
+* Formant Combinations
+Load some combinations of formants into wavetables. Write
+some observations.
+** Combo0
+Initially created: [2020-01-26 Sun 12:19]
+
+This first combo is the first attempt at a waveform combo.
+Waveforms are arranged in ascending order, which also
+correlates with more high-frequency spectral content.
+
+I was hoping these waveforms morphing together would
+sound more "talky". It's more of a resonant sound, kind of
+like a resonant lowpass filter, but with a bit more crunch
+at the upper-end. At certain ranges, it sounds a bit like a
+male "eh" sound, but that's as close as it gets.
+
+The waveforms I chose are not equidistance: 2, 4, 12. When
+strung together, it gives subtle non-linear response
+while morphing. 2 was chosen to get a waveform with some
+teeth. 4 has a bit more. 12 has upper frequency content,
+but not too much to overdo it.
+
+When I wiggle the stylus in the upper left-hand corner of
+the XY instrument (high frequency, mostly upper waveform),
+there's a bit of helpless tiny animal shriek you can get.
+It's annoying, but there's a place for it.
+#+NAME: top
+#+BEGIN_SRC scheme
+(define (fmt-combo0)
+  (lwt (fmtsin 2) 0)
+  (lwt (fmtsin 4) 1)
+  (lwt (fmtsin 12) 2))
+#+END_SRC

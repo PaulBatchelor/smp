@@ -1,0 +1,17 @@
+#+TITLE: misc
+These are waveforms with the prefix "misc".
+* TODO amsweep
+* TODO artificial
+* TODO assymetrical
+* TODO constantdclines
+* TODO exponentialsine
+* TODO gap
+* TODO impulsetrain
+* TODO invf
+* TODO iterations
+* TODO lofi
+* TODO polynomials
+* TODO randomstep
+* TODO serial
+* TODO sinc
+* TODO smoothed

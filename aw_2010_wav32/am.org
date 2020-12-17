@@ -1,0 +1,12 @@
+#+TITLE: Amplitude Modulation
+This page is all the waveforms with the "am" prefix.
+One is to assume they were waveforms generated using
+amplitude modulation techniques.
+* TODO binmult_rm
+* complex
+** TODO complex_nonsine
+** TODO complex_sine
+* simple
+** TODO simple_nonsine
+** TODO simple_sine
+* TODO iterativeam

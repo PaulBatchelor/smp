@@ -1,0 +1,15 @@
+#+TITLE: Classic
+This page dedicated to all the wavetables in the "classic"
+category.
+
+There are a few folders that have the "classic_" prefix.
+
+These will be listed here as subtopics for now in the TODO
+state.
+* TODO pulse
+* TODO saw
+* TODO filtered saw
+* TODO sine
+* TODO square
+* TODO filtered square
+* TODO triangle

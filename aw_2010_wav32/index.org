@@ -1,0 +1,80 @@
+#+TITLE: Architecture Waveform Collection 2010
+* What What is this?
+This is an import of my first initial attempts of
+curating and documenting the Architecture waveform
+Collection using Weewiki. Working from this, it will
+gradually end up in the zet.
+* What is this?
+This is the Architecture Waveform collection, from
+[[https://www.galbanum.com/products/architecturewaveforms2010/][Galbanum waveforms]].
+
+This is my initial attempt at trying to curate and document
+these waveforms. The goal here is to provide something I can
+look back on in future works.
+
+Work in progress, naturally.
+* Waveform Notes
+@!(ref "aw_add" "add")!@.
+
+@!(ref "aw_am" "am")!@.
+
+@!(ref "aw_classic" "classic")!@.
+
+@!(ref "aw_fm" "fm")!@.
+
+@!(ref "aw_formants" "formants")!@.
+
+@!(ref "aw_fractal" "fractal")!@.
+
+@!(ref "aw_hm" "hm")!@.
+
+@!(ref "aw_misc" "misc")!@.
+
+@!(ref "aw_partials" "partials")!@.
+
+@!(ref "aw_phaseshift" "phaseshift")!@.
+
+@!(ref "aw_series" "series")!@.
+
+@!(ref "aw_spectral" "spectral")!@.
+
+@!(ref "aw_uhf" "uhf")!@.
+* CLI Usage
+I'm assuming you have find this page this with
+=weewiki server aw_2010_wav32.sqlar=.
+
+Well, this archive is also a fossil repository!
+Open the repository with =fossil open aw_2010_wav32.sqlar=
+in a dedicated directory, and some files should appear.
+Mainly, some org files and a Makefile.
+
+The Makefile has some helpful commands.
+
+=make sync= will synchronize all linked org files to
+the weewiki database.
+
+=make ls= will list all the pages
+
+=make server= will run the weewiki server on port 8080.
+
+=make fserver= will run the fossil server on port 8081.
+
+=make tangle= will tangle any scheme files utilized by
+monolith test programs.
+* Push/Pull
+The push/pull scripts are used to quickly send Fossil and
+WeeWiki data to/from the local instance on the computer to
+an external flash drive (in this case Hermes). These scripts
+work because the bulk of the information (SQLar) has already
+been copied over.
+
+Be sure to make sure that the HERMES disk is mounted with
+=mounter= (dbus service must be turned on for this to work).
+
+Note that pushing and pulling weewiki is a bit of a fragile
+operation due to the fact that things overwritten, rather
+than smartly merged. Important wiki pages should be managed
+via Fossil in case something does go wrong. The push and
+pull scripts will appropriately update and sync before doing
+anything potentially bad. Between that and Fossil, the risk
+is close to zero.

@@ -1,0 +1,5 @@
+#+NAME: series
+Waveforms with the prefix "series".
+* TODO misc
+* TODO polygonal
+* TODO special

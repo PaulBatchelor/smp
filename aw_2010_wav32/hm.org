@@ -1,0 +1,6 @@
+#+TITLE: hm
+I'll be honest... I have no idea what "hm" means, but there
+are some folders with that as a prefix. "hybrid modulation"
+is my best guess.
+* TODO amfmsine
+* TODO fmamsine

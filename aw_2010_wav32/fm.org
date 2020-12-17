@@ -1,0 +1,16 @@
+#+TITLE: Frequency Modulation
+Waveforms with the "fm" prefix. Probably generated
+using FM techniques.
+* TODO 2exp
+* TODO 2sinecosine
+* TODO 2varriableindex (sic)
+* TODO 3
+* TODO binaddfm
+* complex
+** TODO complexnonsine
+** TODO complexsine
+* TODO dual
+* simple
+** TODO simplenonsine
+** TODO simplesinehighi
+** TODO simplesinenf

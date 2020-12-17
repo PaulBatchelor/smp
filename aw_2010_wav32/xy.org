@@ -1,0 +1,240 @@
+#+PROPERTY: header-args:scheme :results silent :noweb yes
+#+TITLE: XY instrument
+This is an XY pad instrument built in monolith, used
+to help preview waveforms. It specifically uses the
+g430s pad from xp-pen.
+
+I think the XY pad is a great surface for exploring
+wavetable sounds. It is ideally suitable for a monophonic
+instrument (good!), and the stylus nature of the device
+makes natural exploration of gestures (also good!)
+* Begin/end stuff (read this first)
+Eval this block:
+
+#+BEGIN_SRC scheme
+<<loader>>
+<<top>>
+#+END_SRC
+
+Then, run =(init)=. This will start the patch.
+
+#+BEGIN_SRC scheme
+(init)
+#+END_SRC
+
+Running the stylus over the xp-pen tablet should make
+some sound.
+
+Quit with:
+
+#+BEGIN_SRC scheme
+(quit)
+#+END_SRC
+* How to load wavetables (also read this!)
+This will vary. The oscillator has at least one wavetable
+created by monolith that is meant to be persistent between
+re-compilations. The function =load-wavetable=, or
+=lwt= will load wavetables from the SQLar db into the
+ftable.
+
+Filenames are long and hard to remember, so for each
+folder/category of wavetables, a set of appropriate
+functions will be provided.
+
+For example, a sine-based formant wavetable filename can
+be generated with =(fmntsine 1)=, and this filename can be
+loaded into the oscillator wavetable with
+=(lwt (fmntsine 1)=. More information can be found in the
+<<Load wavetable utils>> section.
+* Load wavetable utils
+Be sure to tangle first. This will load all the generated
+scheme files via =monolith:load=.
+** Top-level wavetable load
+In order to load local files via =monolith:load=, this
+directory must be appened to via =monolith:append-path=,
+before attempting to load.
+#+NAME: loader
+#+BEGIN_SRC scheme
+(monolith:append-path
+ (string-append
+  (sys:getenv "HOME")
+  "/p/aw_2010_wav32"))
+<<wavetables>>
+#+END_SRC
+* Wavetables
+** Formants
+#+NAME: wavetables
+#+BEGIN_SRC scheme
+(monolith:load "formants.scm")
+; local shortcuts
+(define fmtsin formants-fname-sine)
+(define fmtnsin formants-fname-nonsine)
+#+END_SRC
+** Fractal
+#+NAME: wavetables
+#+BEGIN_SRC scheme
+(monolith:load "fractal.scm")
+(define frctfmsaw fractal-fmsaw-name)
+(define frctam fractal-am-name)
+#+END_SRC
+* Loader
+#+NAME: loader
+#+BEGIN_SRC scheme
+(monolith:load "g430.scm")
+(monolith:load "ugens.scm")
+#+END_SRC
+* Top
+#+NAME: top
+#+BEGIN_SRC scheme
+<<init>>
+<<run>>
+#+END_SRC
+* Init
+#+NAME: init
+#+BEGIN_SRC scheme
+(define (init)
+  (monolith:g430-setup)
+  (monolith:start)
+  (mkft)
+  (run))
+#+END_SRC
+* mkft
+#+NAME: top
+#+BEGIN_SRC scheme
+(define (mkft)
+  (monolith:ftbl-create "ft" 2048)
+  <<additional_ftables>>
+)
+#+END_SRC
+
+Additional ftables are needed for the morphing oscillator.
+
+#+NAME: additional_ftables
+#+BEGIN_SRC scheme
+  (monolith:ftbl-create "ftB" 2048)
+  (monolith:ftbl-create "ftC" 2048)
+#+END_SRC
+
+Get the ftable with =getft= it will take in a number,
+and return the correct string.
+
+#+NAME: top
+#+BEGIN_SRC scheme
+(define (getft n)
+  (case n
+    ((0) "ft")
+    ((1) "ftB")
+    ((2) "ftC")
+    (else "ft")))
+#+END_SRC
+* monft scheme wrapper
+#+NAME: top
+#+BEGIN_SRC scheme
+(define (monft ft)
+  (param ft)
+  (rvl "monft"))
+#+END_SRC
+* sinesum test
+This will apply a sinesum function to the main ftable.
+#+NAME: top
+#+BEGIN_SRC scheme
+(define (sinesum s) (gen_sinesum (monft "ft") s))
+#+END_SRC
+* Single Oscillator Instrument
+#+NAME: top
+#+BEGIN_SRC scheme
+(define (axis-scale axis min max)
+  (scale (axis) (min) (max)))
+(define (single-osc)
+  (display "Loading Single Oscillator")
+  (newline)
+  (osc (mtof (axis-scale
+              (lambda () (port (g430x) (param 0.008)))
+              (paramf 24)
+              (paramf 96)))
+       (param 0.3)
+       (param 0)
+       (lambda () (gen_sine (monft "ft"))))
+
+  (mul '() (port (sub (param 1) (g430y)) (param 0.001)))
+  (mul '() (port (g430s) (param 0.01))))
+#+END_SRC
+* Three-stage morphing oscillator
+This will create an oscillator with three configurable
+wavetables that it can morph between. The x-axis controls
+frequency (same as the single oscillator). The y-axis
+controls wavetable position. This oscillator is made
+possible via an instance of =phasor= and =tcross=.
+#+NAME: top
+#+BEGIN_SRC scheme
+(define (morph-osc)
+  ;; initialize as sine waves
+  (display "Loading Morphing Oscillator")
+  (newline)
+  (gen_sine (monft (getft 0)))
+  (gen_sine (monft (getft 1)))
+  (gen_sine (monft (getft 2)))
+  (rvl "3 drops")
+  (tcross
+   (phasor
+    (mtof (axis-scale
+           (lambda () (port (g430x) (param 0.008)))
+           (paramf 24)
+           (paramf 96)))
+    (param 0))
+   (port (sub (param 1) (g430y)) (param 0.001))
+   (lambda () (monft (getft 0)))
+   (lambda () (monft (getft 1)))
+   (lambda () (monft (getft 2))))
+  (mul '() 0.5)
+  (mul '() (port (g430s) (param 0.01)))
+)
+#+END_SRC
+* Changing the synth
+The synth can be changed with =change-synth=
+#+NAME: top
+#+BEGIN_SRC scheme
+(define (change-synth synth) (set! current-synth synth))
+#+END_SRC
+* Run
+The core run function contained around the instrument.
+#+NAME: top
+#+BEGIN_SRC scheme
+(define current-synth single-osc)
+#+END_SRC
+#+NAME: run
+#+BEGIN_SRC scheme
+(define (run)
+   ;;(single-osc)
+   (morph-osc)
+   ;;(current-synth)
+   (out '()))
+#+END_SRC
+* SQLar wavetable loader (load-wavetable)
+This will load a wavetable from the SQLar database, given
+a filename.
+
+Monolith needs to know where on the computer this database
+is located. Nothing clever with this right now. It's just
+hard coded in.
+
+TODO: replace the path with some sort of ROOTDIR variable.
+
+#+NAME: top
+#+BEGIN_SRC scheme
+(define SQLAR-DB
+  "/home/paul/p/aw_2010_wav32/aw_2010_wav32.sqlar")
+#+END_SRC
+
+#+NAME: top
+#+BEGIN_SRC scheme
+(define (load-wavetable wt slot)
+  (monolith:sqlar-wavread SQLAR-DB wt (getft slot)))
+#+END_SRC
+
+Or =lwt= for short.
+
+#+NAME: top
+#+BEGIN_SRC scheme
+(define lwt load-wavetable)
+#+END_SRC

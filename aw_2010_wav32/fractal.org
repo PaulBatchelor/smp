@@ -1,0 +1,162 @@
+#+PROPERTY: header-args:scheme :results silent :noweb yes
+#+TITLE: fractal
+Waveforms with the prefix "fractal". I have no idea what it
+means to be fractal in this context. Could be fun.
+
+* fractal.scm
+Scheme bindings for fractal.
+#+NAME: fractal.scm
+#+BEGIN_SRC scheme :tangle fractal.scm
+;; Things to come later...
+<<top>>
+#+END_SRC
+* TODO am
+** Notes
+*** [2020-02-14 Fri 12:55] making filename generator
+This seems to have a similar format to the fmsaw
+generator. So that makes things be easy.
+
+Using the ABC numbering system:
+
+A has a range of 1-9.
+
+B has  a range of 1-9, but they aren't all there all
+the time. Even A values have only odd B values I think.
+
+C goes 1, 2, 4 8.
+
+Another cryptic system to decipher.
+*** [2020-02-14 Fri 13:02] initial listening.
+
+111 is a bit reedy sounding, compared to the fmsaw.
+
+Crossfading between 111 211, there is a gap of silence.
+Some serious phasing perhaps?
+
+I swear I can hear more fifths in 311.
+
+Thirds in 411?
+
+By 611, the tonal center becomes harder to percieve. Perhaps
+the fundamental goes away?
+
+118 has vocal-like qualities at the lower to mid registers.
+
+348 sounds "dusty" to me, for some reason.
+** Filename Generator
+#+NAME: top
+#+BEGIN_SRC scheme
+(define (fractal-am-name-withdir dir a b c)
+  (let ((name
+         (string-append
+          "fractal_am_0"
+          (number->string a)
+          "_0"
+          (number->string b)
+          "_0"
+          (number->string c)'
+          ".wav")))
+    (if (equal? dir "")
+        (eval name)
+        (string-append dir "/" name))))
+#+END_SRC
+#+NAME: top
+#+BEGIN_SRC scheme
+(define (fractal-am-name a b c)
+  (fractal-am-name-withdir "fractal_am" a b c))
+#+END_SRC
+* WIP fmsaw
+** Notes
+*** [2020-02-12 Wed 14:19] first one to try
+Our first dive into this. This looked the
+most intersting. saw waves are good, and I think they tend
+to make pretty good timbres when doing FM.
+
+The FM saw has a name format of the following:
+"frctfm_saw_NN_NN_NN.wav". No idea what those numbers
+could mean. But I'll write an initial filename generator
+for this in scheme. =dir= is the directory/filepath of
+the name, which can be an empty string "", and =a=, =b=,
+and =c= are the numbers.
+
+It seems that despite the numbers being double digit,
+the range is between 1 and 9.
+
+Upon first glance, it would appear that =a= has a
+total of 9 values, =b= goes through 9 values, and =c=
+only goes through 2 values.
+
+I really need to be able to draw these waveforms to see
+what they look like. I have a utility from before that
+does this, but it may be nice to build something a bit
+more robust. Perhaps make use of btprnt? A wav plotter
+would be a very helpful tool to build for later.
+*** [2020-02-12 Wed 14:48] initial impressions
+I have created an initial file loader, and have put them
+in the XY instrument. I am using the =frctfmsaw= shortcut
+there, so I'll be talking about waveforms using the triplets
+found there.
+
+the wave found at =1 1 1= is a super massive sound at the
+low end. Comparatively =5 1 1= has a distinct major third,
+and the low end goes away.
+
+Could relate to over tones?
+
+Going from =1 1 1= to =1 5 1= does not sound as dramatic.
+Nor does =1 1 1= to =1 1 2=. Perhaps there is something
+happening visually that is more dramatic?
+
+=8 3 1= is a pretty crazy sounding triplet. Probably because
+it starts at a higher harmonic.
+
+As expected, a good deal amount of aliasing. As the numbers
+increase more aliasing happens. =1 1 1= actually isn't too
+bad.
+*** [2020-02-14 Fri 12:53] 192 is noiser than 191
+Not sure what that means. Again, I think more information
+can be found visually. Working on a portable solution in
+btprnt.
+** Filename Generator
+#+NAME: top
+#+BEGIN_SRC scheme
+(define (fractal-fmsaw-name-withdir dir a b c)
+  (let ((name
+         (string-append
+          "frctfm_saw_0"
+          (number->string a)
+          "_0"
+          (number->string b)
+          "_0"
+          (number->string c)'
+          ".wav")))
+    (if (equal? dir "")
+        (eval name)
+        (string-append dir "/" name))))
+#+END_SRC
+#+NAME: top
+#+BEGIN_SRC scheme
+(define (fractal-fmsaw-name a b c)
+  (fractal-fmsaw-name-withdir "fractal_fmsaw" a b c))
+#+END_SRC
+* TODO fmsoftsq
+* TODO fmsoftsw
+* TODO fmsoftsquare
+* TODO saw
+* TODO square
+* TODO staircase
+* Combintations
+** Combo0
+An fmsaw + am hybrid.
+
+The gritty meat of fmsaw 111, with a middle of
+the vocal-like frctam 118, followed by the dusty
+metallic frctam 348.
+
+#+NAME: top
+#+BEGIN_SRC scheme
+(define (frct-combo0)
+  (lwt (frctfmsaw 1 1 1) 0)
+  (lwt (frctam 1 1 8) 1)
+  (lwt (frctam 3 4 8) 2))
+#+END_SRC

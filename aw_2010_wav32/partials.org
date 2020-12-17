@@ -1,0 +1,5 @@
+#+TITLE: partials
+Waveforms with the prefix "partials".
+* TODO nonsine
+* TODO sinefixed
+* TODO sineproportional

@@ -1,0 +1,29 @@
+#+TITLE: additive
+These are all the waveforms with the "add" prefix, which
+I assume is a shorthand for additive. These were probably
+all made using some sort of additive synthesis method.
+* binadd
+Probably stands for "binary additive": Full strength
+equal power harmonics that are either present or not
+present.
+** TODO binaddarth
+** TODO binaddfib
+** TODO binaddint
+*** TODO binaddint_1
+*** TODO binaddint_2
+*** TODO binaddint_4
+** TODO binaddsine
+** TODO binaddsqrs
+* partials
+** TODO partials2n
+** TODO partials3n
+** TODO partials4n
+** TODO partialsrangeall
+** TODO partialsrangeodd
+* sine
+** TODO sine2n
+** TODO sine3n
+** TODO sinemulti
+* TODO nonsine
+This seems to be the only one of its kind in this category.
+No subcategories here.

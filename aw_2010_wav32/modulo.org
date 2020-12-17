@@ -1,0 +1,7 @@
+#+TITLE: modulo
+Waveforms with the prefix "modulo".
+* TODO additive
+* TODO fm
+* TODO saw
+* TODO sincos
+* TODO sine
