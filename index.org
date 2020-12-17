@@ -1,0 +1,6 @@
+#+TITLE: smp
+This is the main landing page for smp, my personal
+catalogue of curated samples.
+
+I'm just getting started, there's not much more to
+say at the moment right now.
