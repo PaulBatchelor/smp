@@ -1,0 +1,8 @@
+#+TITLE: Piezo
+This is a sample library by npisanti.
+
+The samples were orginally found here:
+[[http://npisanti.com/pages/np-samples.html]].
+
+These are a collection of sampled singe-hit percussive
+sounds from a homemade piezo-spring instrument.

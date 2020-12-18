@@ -8,6 +8,7 @@ weewiki janet genwiki.janet
 zetit akwf
 zetit aw_2010_wav32
 zetit waveedit
+zetit piezo
 
 echo "importing logs"
 weewiki zet import < logs.tsv
