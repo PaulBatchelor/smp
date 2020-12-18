@@ -7,6 +7,7 @@ function zetout() {
 zetout akwf
 zetout aw_2010_wav32
 zetout waveedit
+zetout piezo
 
 echo "dumping logs group"
 weewiki zet export logs > logs.tsv
