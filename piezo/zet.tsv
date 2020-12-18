@@ -139,3 +139,5 @@
 -	0955cd79-9d35-4281-aa6d-608f98e0b389	#dab26199-9036-49a6-9ca3-7074b0e8fa31
 2020-12-18 23:14:04	e5acb8aa-976c-4f0f-bbc7-00ee87705a0a	>initial import of npisanti's piezo sample library done today.
 -	e5acb8aa-976c-4f0f-bbc7-00ee87705a0a	#dab26199-9036-49a6-9ca3-7074b0e8fa31
+2020-12-18 23:17:26	86f4a0c5-ef0e-48f7-bb26-695e8edcdc34	>Pretty sure I resampled these using SoX from 48kHz to 44.1kHz. Saves me a lot of trouble.
+-	86f4a0c5-ef0e-48f7-bb26-695e8edcdc34	#dab26199-9036-49a6-9ca3-7074b0e8fa31
