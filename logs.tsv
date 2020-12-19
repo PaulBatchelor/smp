@@ -10,3 +10,17 @@
 2020-12-17 22:50:57	9c831de1-6186-4260-b00c-4548fcddbfb9	>there's no way to check if a entry belongs to exactly *one* of the core groups being exported. so it's very possible to create duplicate entries by mistake. we will cross that bridge when we get there. #updates
 -	9c831de1-6186-4260-b00c-4548fcddbfb9	#0845a2c7-b25b-4af6-89b2-8f87ba171728
 -	9c831de1-6186-4260-b00c-4548fcddbfb9	#cb07b3a2-2f8d-4628-b41b-ae407b6e227f
+2020-12-19 14:33:22	5aa020da-cf85-4afb-a907-31dc347bd13d	>trying to build an instrument today using akwf. starting with AKWF_vgamebasic because I want bright bloops for the !codex.
+-	5aa020da-cf85-4afb-a907-31dc347bd13d	#0845a2c7-b25b-4af6-89b2-8f87ba171728
+-	5aa020da-cf85-4afb-a907-31dc347bd13d	#326a9788-a390-4a73-bdde-d386b1841379
+2020-12-19 14:34:37	6af2fd93-e79a-4331-84be-d770605d7115	>this is my first attempt actually trying to use crates in monolith, so this might be slow going at first.
+-	6af2fd93-e79a-4331-84be-d770605d7115	#0845a2c7-b25b-4af6-89b2-8f87ba171728
+-	6af2fd93-e79a-4331-84be-d770605d7115	#326a9788-a390-4a73-bdde-d386b1841379
+-	6af2fd93-e79a-4331-84be-d770605d7115	#5aa020da-cf85-4afb-a907-31dc347bd13d
+2020-12-19 14:35:05	b4028653-8b43-4138-9085-737f3320cb1f	>this also begins sample curation. here we go.
+-	b4028653-8b43-4138-9085-737f3320cb1f	#0845a2c7-b25b-4af6-89b2-8f87ba171728
+-	b4028653-8b43-4138-9085-737f3320cb1f	#326a9788-a390-4a73-bdde-d386b1841379
+-	b4028653-8b43-4138-9085-737f3320cb1f	#6af2fd93-e79a-4331-84be-d770605d7115
+2020-12-19 14:37:27	abcaf26f-cfa4-4ad7-8186-7d5c9ff87337	>there seems to be a discrepency in case. in SQLar the top-level file is 'akwf'. in the zet it's 'AKWF'. wonder if it'll work.
+-	abcaf26f-cfa4-4ad7-8186-7d5c9ff87337	#326a9788-a390-4a73-bdde-d386b1841379
+-	abcaf26f-cfa4-4ad7-8186-7d5c9ff87337	#0845a2c7-b25b-4af6-89b2-8f87ba171728
