@@ -8738,7 +8738,6 @@
 -	b4028653-8b43-4138-9085-737f3320cb1f	#6af2fd93-e79a-4331-84be-d770605d7115
 2020-12-19 14:37:27	abcaf26f-cfa4-4ad7-8186-7d5c9ff87337	>there seems to be a discrepency in case. in SQLar the top-level file is 'akwf'. in the zet it's 'AKWF'. wonder if it'll work.
 -	abcaf26f-cfa4-4ad7-8186-7d5c9ff87337	#326a9788-a390-4a73-bdde-d386b1841379
--	abcaf26f-cfa4-4ad7-8186-7d5c9ff87337	#0845a2c7-b25b-4af6-89b2-8f87ba171728
 2020-12-19 16:56:40	a4546943-ea41-43cd-90bd-a214e4b77bcc	>definitely some issues. applying some sed magic on the tsvs in AKWF folder.
 -	a4546943-ea41-43cd-90bd-a214e4b77bcc	#326a9788-a390-4a73-bdde-d386b1841379
 -	a4546943-ea41-43cd-90bd-a214e4b77bcc	#abcaf26f-cfa4-4ad7-8186-7d5c9ff87337
@@ -8753,6 +8752,3 @@
 -	b4028653-8b43-4138-9085-737f3320cb1f	#0845a2c7-b25b-4af6-89b2-8f87ba171728
 -	b4028653-8b43-4138-9085-737f3320cb1f	#326a9788-a390-4a73-bdde-d386b1841379
 -	b4028653-8b43-4138-9085-737f3320cb1f	#6af2fd93-e79a-4331-84be-d770605d7115
-2020-12-19 14:37:27	abcaf26f-cfa4-4ad7-8186-7d5c9ff87337	>there seems to be a discrepency in case. in SQLar the top-level file is 'akwf'. in the zet it's 'AKWF'. wonder if it'll work.
--	abcaf26f-cfa4-4ad7-8186-7d5c9ff87337	#326a9788-a390-4a73-bdde-d386b1841379
--	abcaf26f-cfa4-4ad7-8186-7d5c9ff87337	#0845a2c7-b25b-4af6-89b2-8f87ba171728
