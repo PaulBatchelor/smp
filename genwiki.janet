@@ -9,6 +9,7 @@
 (ww-add-link "akwf" "akwf/akwf.org")
 (ww-add-link "waveedit" "waveedit/waveedit.org")
 (ww-add-link "piezo" "piezo/piezo.org")
+(ww-add-link "logs" "logs.org")
 
 # Architecture Waveforms
 (aw/import)
