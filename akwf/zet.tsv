@@ -8738,3 +8738,16 @@
 2020-12-19 16:56:40	a4546943-ea41-43cd-90bd-a214e4b77bcc	>definitely some issues. applying some sed magic on the tsvs in AKWF folder.
 -	a4546943-ea41-43cd-90bd-a214e4b77bcc	#326a9788-a390-4a73-bdde-d386b1841379
 -	a4546943-ea41-43cd-90bd-a214e4b77bcc	#abcaf26f-cfa4-4ad7-8186-7d5c9ff87337
+2020-12-19 20:04:14	d0176f2b-010a-41f4-bd55-245f82baa864	>compared to vgsaw-0001, a little bit darker. I wonder if there is a pattern.
+-	d0176f2b-010a-41f4-bd55-245f82baa864	#d1e3643c-de81-40b2-b4e1-a249e2820faf
+-	d0176f2b-010a-41f4-bd55-245f82baa864	#326a9788-a390-4a73-bdde-d386b1841379
+2020-12-19 20:10:06	b718e248-0ba0-4b5d-8b69-4e4f7d6d068f	>vgsaw_0003 is very similar to vgsaw_0001. humans are phase blind, so I am sure if I plotted these I would see dramatic differences.
+-	b718e248-0ba0-4b5d-8b69-4e4f7d6d068f	#326a9788-a390-4a73-bdde-d386b1841379
+-	b718e248-0ba0-4b5d-8b69-4e4f7d6d068f	#2513a45d-8e7b-4148-a40d-3ff47e72322c
+2020-12-19 20:12:27	616a547d-eace-4f5e-8ee0-fe5bdd7c701d	>picked this triangle wave at random. sounds like... a triangle wave? random selection and comparison next.
+-	616a547d-eace-4f5e-8ee0-fe5bdd7c701d	#326a9788-a390-4a73-bdde-d386b1841379
+-	616a547d-eace-4f5e-8ee0-fe5bdd7c701d	#cf7c2f50-e428-4c6e-a96f-b6023bd850cb
+2020-12-19 20:19:14	d600a8ab-8f43-4511-beca-76d4603da073	>the difference between these two is in the dusty aliasing noise above. at 330hz coming out of my !minirig, this one has brighter dust than 13.
+-	d600a8ab-8f43-4511-beca-76d4603da073	#326a9788-a390-4a73-bdde-d386b1841379
+-	d600a8ab-8f43-4511-beca-76d4603da073	#616a547d-eace-4f5e-8ee0-fe5bdd7c701d
+-	d600a8ab-8f43-4511-beca-76d4603da073	#7c33a809-9a23-420c-b854-c8820af0358f
