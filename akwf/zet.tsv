@@ -1,4 +1,4 @@
-2020-12-17 14:12:26	326a9788-a390-4a73-bdde-d386b1841379	@akwf.sqlar
+2019-12-17 14:12:26	326a9788-a390-4a73-bdde-d386b1841379	@akwf.sqlar
 2020-12-17 14:12:26	34b3152c-b66f-4d51-82f4-3f1fb7482e37	/akwf/AKWF_0001/AKWF_0001.wav
 -	34b3152c-b66f-4d51-82f4-3f1fb7482e37	#326a9788-a390-4a73-bdde-d386b1841379
 2020-12-17 14:12:26	02c4609d-7fad-47d0-a5e2-3a56def32cc2	/akwf/AKWF_0001/AKWF_0002.wav
@@ -8726,14 +8726,11 @@
 2020-12-17 22:54:47	919bc737-db17-4ff6-ba23-d87d3aa6da8a	>one of the things I am expecting with the AKWF collection is that they are bright and chiptune-y. perfect for the kind of manic aesthetic I am trying to get with the #codex.
 -	919bc737-db17-4ff6-ba23-d87d3aa6da8a	#326a9788-a390-4a73-bdde-d386b1841379
 2020-12-19 14:33:22	5aa020da-cf85-4afb-a907-31dc347bd13d	>trying to build an instrument today using akwf. starting with AKWF_vgamebasic because I want bright bloops for the !codex.
--	5aa020da-cf85-4afb-a907-31dc347bd13d	#0845a2c7-b25b-4af6-89b2-8f87ba171728
 -	5aa020da-cf85-4afb-a907-31dc347bd13d	#326a9788-a390-4a73-bdde-d386b1841379
 2020-12-19 14:34:37	6af2fd93-e79a-4331-84be-d770605d7115	>this is my first attempt actually trying to use crates in monolith, so this might be slow going at first.
--	6af2fd93-e79a-4331-84be-d770605d7115	#0845a2c7-b25b-4af6-89b2-8f87ba171728
 -	6af2fd93-e79a-4331-84be-d770605d7115	#326a9788-a390-4a73-bdde-d386b1841379
 -	6af2fd93-e79a-4331-84be-d770605d7115	#5aa020da-cf85-4afb-a907-31dc347bd13d
 2020-12-19 14:35:05	b4028653-8b43-4138-9085-737f3320cb1f	>this also begins sample curation. here we go.
--	b4028653-8b43-4138-9085-737f3320cb1f	#0845a2c7-b25b-4af6-89b2-8f87ba171728
 -	b4028653-8b43-4138-9085-737f3320cb1f	#326a9788-a390-4a73-bdde-d386b1841379
 -	b4028653-8b43-4138-9085-737f3320cb1f	#6af2fd93-e79a-4331-84be-d770605d7115
 2020-12-19 14:37:27	abcaf26f-cfa4-4ad7-8186-7d5c9ff87337	>there seems to be a discrepency in case. in SQLar the top-level file is 'akwf'. in the zet it's 'AKWF'. wonder if it'll work.
@@ -8741,14 +8738,3 @@
 2020-12-19 16:56:40	a4546943-ea41-43cd-90bd-a214e4b77bcc	>definitely some issues. applying some sed magic on the tsvs in AKWF folder.
 -	a4546943-ea41-43cd-90bd-a214e4b77bcc	#326a9788-a390-4a73-bdde-d386b1841379
 -	a4546943-ea41-43cd-90bd-a214e4b77bcc	#abcaf26f-cfa4-4ad7-8186-7d5c9ff87337
-2020-12-19 14:33:22	5aa020da-cf85-4afb-a907-31dc347bd13d	>trying to build an instrument today using akwf. starting with AKWF_vgamebasic because I want bright bloops for the !codex.
--	5aa020da-cf85-4afb-a907-31dc347bd13d	#0845a2c7-b25b-4af6-89b2-8f87ba171728
--	5aa020da-cf85-4afb-a907-31dc347bd13d	#326a9788-a390-4a73-bdde-d386b1841379
-2020-12-19 14:34:37	6af2fd93-e79a-4331-84be-d770605d7115	>this is my first attempt actually trying to use crates in monolith, so this might be slow going at first.
--	6af2fd93-e79a-4331-84be-d770605d7115	#0845a2c7-b25b-4af6-89b2-8f87ba171728
--	6af2fd93-e79a-4331-84be-d770605d7115	#326a9788-a390-4a73-bdde-d386b1841379
--	6af2fd93-e79a-4331-84be-d770605d7115	#5aa020da-cf85-4afb-a907-31dc347bd13d
-2020-12-19 14:35:05	b4028653-8b43-4138-9085-737f3320cb1f	>this also begins sample curation. here we go.
--	b4028653-8b43-4138-9085-737f3320cb1f	#0845a2c7-b25b-4af6-89b2-8f87ba171728
--	b4028653-8b43-4138-9085-737f3320cb1f	#326a9788-a390-4a73-bdde-d386b1841379
--	b4028653-8b43-4138-9085-737f3320cb1f	#6af2fd93-e79a-4331-84be-d770605d7115
