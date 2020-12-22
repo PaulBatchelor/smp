@@ -25,3 +25,5 @@
 -	760a88f0-22b6-447e-b07d-fe3466a524c9	#9e192e84-f848-4c97-839a-56272796c7ab
 2020-12-22 16:51:27	5b8157ed-4a62-4bbf-a5c1-d30dafec5a08	>applying a @labels group. will make up categories as I go.
 -	5b8157ed-4a62-4bbf-a5c1-d30dafec5a08	#0845a2c7-b25b-4af6-89b2-8f87ba171728
+2020-12-22 19:30:59	bdd552e4-b493-4fcc-a706-d94ab4c69046	>some more utilties managing labels and groups. I now can look up an entry and get the list of groups and labels they are a part of.
+-	bdd552e4-b493-4fcc-a706-d94ab4c69046	#0845a2c7-b25b-4af6-89b2-8f87ba171728

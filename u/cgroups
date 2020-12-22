@@ -1,0 +1,9 @@
+# cgroup prints all entries associated with a particular group
+if [ $# -eq 0 ]
+then
+    echo "Usage: $0 name"
+    exit
+fi
+
+weewiki zet export $1 | \
+awk -F '\t' '{if (match($3, "^/")) {print(substr($2, 0, 8), $3)}}'
