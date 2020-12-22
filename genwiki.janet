@@ -10,6 +10,7 @@
 (ww-add-link "waveedit" "waveedit/waveedit.org")
 (ww-add-link "piezo" "piezo/piezo.org")
 (ww-add-link "logs" "logs.org")
+(ww-add-link "unfa" "unfa/unfa.org")
 
 # Architecture Waveforms
 (aw/import)

@@ -9,6 +9,7 @@ zetit akwf
 zetit aw_2010_wav32
 zetit waveedit
 zetit piezo
+zetit unfa
 
 echo "importing logs"
 weewiki zet import < logs.tsv
