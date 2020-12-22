@@ -11,3 +11,5 @@ zetout piezo
 
 echo "dumping logs group"
 weewiki zet export logs > logs.tsv
+echo "dumping labels group"
+weewiki zet export labels > labels.tsv

@@ -1,0 +1,1 @@
+weewiki zet export labels | cut -f 3 | egrep "^@"

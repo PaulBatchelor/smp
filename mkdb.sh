@@ -12,6 +12,8 @@ zetit piezo
 
 echo "importing logs"
 weewiki zet import < logs.tsv
+echo "importing labels"
+weewiki zet import < labels.tsv
 
 echo "vacuuming"
 weewiki vacuum
