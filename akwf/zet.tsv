@@ -8754,3 +8754,31 @@
 2020-12-19 22:12:48	2e0df0cc-89bf-449c-85e0-faa63c4ed257	>been leaning on this waveform pretty heavily in the wt1 patch. the chiptune arps really bring out the character of it and it scratches an itch.
 -	2e0df0cc-89bf-449c-85e0-faa63c4ed257	#326a9788-a390-4a73-bdde-d386b1841379
 -	2e0df0cc-89bf-449c-85e0-faa63c4ed257	#5e9eafa5-5de6-4fbd-b8ac-00e69f236405
+2020-12-22 14:24:57	2f6842d6-99e6-4f3c-a21c-650b9d68d936	>using squ-15 in a code fragment wt2. it's a noisy square, as expected.
+-	2f6842d6-99e6-4f3c-a21c-650b9d68d936	#326a9788-a390-4a73-bdde-d386b1841379
+-	2f6842d6-99e6-4f3c-a21c-650b9d68d936	#d0cbe594-5ac1-437b-a7a3-fa93982e74dd
+2020-12-22 14:28:36	a80fe54e-a858-49d1-9bc5-a58a50360fe8	>compared to squ-15, this raw wave sounds very saw-toothy to my ears. but that's not saying much.
+-	a80fe54e-a858-49d1-9bc5-a58a50360fe8	#dcc56983-1564-44f1-9f5e-6940c581e346
+-	a80fe54e-a858-49d1-9bc5-a58a50360fe8	#2f6842d6-99e6-4f3c-a21c-650b9d68d936
+-	a80fe54e-a858-49d1-9bc5-a58a50360fe8	#d0cbe594-5ac1-437b-a7a3-fa93982e74dd
+-	a80fe54e-a858-49d1-9bc5-a58a50360fe8	#326a9788-a390-4a73-bdde-d386b1841379
+2020-12-22 14:33:23	4cb0d1e1-ad8a-4745-a57e-be33c4ad9481	>this one is the gentlest of the 3 waveforms I'm trying today. has a very subtractive synthesis quality to it. like it has been lowpassed filtered. could be sawtoothular or low indexed FM. filename does not give anything away.
+-	4cb0d1e1-ad8a-4745-a57e-be33c4ad9481	#326a9788-a390-4a73-bdde-d386b1841379
+-	4cb0d1e1-ad8a-4745-a57e-be33c4ad9481	#a80fe54e-a858-49d1-9bc5-a58a50360fe8
+-	4cb0d1e1-ad8a-4745-a57e-be33c4ad9481	#4406a8e8-4e35-4319-9c02-0bca2d14beb2
+2020-12-22 14:38:23	15949857-c420-4bdd-bb46-59333f0af625	>of the 3, the squ-15 waveform has the most character at low frequencies (~20hz).
+-	15949857-c420-4bdd-bb46-59333f0af625	#326a9788-a390-4a73-bdde-d386b1841379
+-	15949857-c420-4bdd-bb46-59333f0af625	#d0cbe594-5ac1-437b-a7a3-fa93982e74dd
+-	15949857-c420-4bdd-bb46-59333f0af625	#4cb0d1e1-ad8a-4745-a57e-be33c4ad9481
+2020-12-22 14:40:36	00840420-0bcb-4f99-9d6d-2ccf15a8a76f	>the 9-899 waveform has the most lyrical qualities. probably will work best pitched at singing registers with vibrato or something.
+-	00840420-0bcb-4f99-9d6d-2ccf15a8a76f	#326a9788-a390-4a73-bdde-d386b1841379
+-	00840420-0bcb-4f99-9d6d-2ccf15a8a76f	#4406a8e8-4e35-4319-9c02-0bca2d14beb2
+-	00840420-0bcb-4f99-9d6d-2ccf15a8a76f	#15949857-c420-4bdd-bb46-59333f0af625
+2020-12-22 14:44:21	8e406b52-0f34-4bb4-bd05-866874f50ff6	>raw3 is kind of inbetween. squ-15 and 9-899. it's not getting me all that excited. I'm going to try using it as a modulation source today.
+-	8e406b52-0f34-4bb4-bd05-866874f50ff6	#326a9788-a390-4a73-bdde-d386b1841379
+-	8e406b52-0f34-4bb4-bd05-866874f50ff6	#00840420-0bcb-4f99-9d6d-2ccf15a8a76f
+-	8e406b52-0f34-4bb4-bd05-866874f50ff6	#dcc56983-1564-44f1-9f5e-6940c581e346
+2020-12-22 14:56:50	9e192e84-f848-4c97-839a-56272796c7ab	>I don't even have to visualize the waveform, I know this is a ramped sawtooth. I just sonified it as an LFO.
+-	9e192e84-f848-4c97-839a-56272796c7ab	#326a9788-a390-4a73-bdde-d386b1841379
+-	9e192e84-f848-4c97-839a-56272796c7ab	#dcc56983-1564-44f1-9f5e-6940c581e346
+-	9e192e84-f848-4c97-839a-56272796c7ab	#8e406b52-0f34-4bb4-bd05-866874f50ff6
