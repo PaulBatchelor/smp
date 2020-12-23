@@ -8792,3 +8792,15 @@
 -	7c33a809-9a23-420c-b854-c8820af0358f	#8447aec3-e546-4ce9-ac85-f193384b9791
 -	4406a8e8-4e35-4319-9c02-0bca2d14beb2	#44e5852b-c869-4257-8d34-cc34fdef1318
 -	dcc56983-1564-44f1-9f5e-6940c581e346	#a2d92677-9980-4933-a4c1-97a0680ff08e
+2020-12-23 13:00:21	3b86669a-0f69-4198-a61e-7c60c290f0dc	>this waveform is from the =bw_tri= group, which I assume means it's a triangle bandlimited waveform? I consider triangles to be sonically in a similar space to sine waves, with a bit more spectral grit.
+-	3b86669a-0f69-4198-a61e-7c60c290f0dc	#326a9788-a390-4a73-bdde-d386b1841379
+-	3b86669a-0f69-4198-a61e-7c60c290f0dc	#fbc95b71-7d6b-46c7-a900-24818efaca52
+2020-12-23 13:03:26	00674ece-8446-41b3-9d2c-f18eeb2740cc	>this waveform is from the epiano !akwf group. they probably sampled it from some electric piano they had. usually this is either some kind of rhodes or dx7 tine sound. will be interested to what comes out in the waveform.
+-	00674ece-8446-41b3-9d2c-f18eeb2740cc	#326a9788-a390-4a73-bdde-d386b1841379
+-	00674ece-8446-41b3-9d2c-f18eeb2740cc	#2b94051d-4df3-40b5-acef-a68d54ad5efa
+2020-12-23 13:04:51	c7948f43-4879-4a89-8fb7-e87be9924b7d	>this sound is from one of the numbered groups. no clue what this is going to correspond to.
+-	c7948f43-4879-4a89-8fb7-e87be9924b7d	#326a9788-a390-4a73-bdde-d386b1841379
+-	c7948f43-4879-4a89-8fb7-e87be9924b7d	#babdb364-7080-48e4-a5d5-36d91aaeb9c5
+-	fbc95b71-7d6b-46c7-a900-24818efaca52	#8447aec3-e546-4ce9-ac85-f193384b9791
+-	2b94051d-4df3-40b5-acef-a68d54ad5efa	#8447aec3-e546-4ce9-ac85-f193384b9791
+-	babdb364-7080-48e4-a5d5-36d91aaeb9c5	#8447aec3-e546-4ce9-ac85-f193384b9791
