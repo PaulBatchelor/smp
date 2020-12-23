@@ -36,6 +36,19 @@
     (org (string (v "time") ":\n\n"))
     (org (string (string/slice (v "value") 1 -1) "\n\n"))))
 
+(defn refstr [uuid]
+  (def query (sqlite3/eval
+          (ww-db)
+          (string
+           "SELECT value FROM wikizet WHERE "
+           "UUID IS '" uuid "' AND value LIKE '#%';")))
+
+  (var str @[])
+  (each v query
+    (array/push str (string/slice (v "value") 1 9)))
+
+  (string/join str ", "))
+
 (defn messages [group &opt typeflag]
   (default typeflag "@")
   (def gid
@@ -49,12 +62,19 @@
     (sqlite3/eval
      (ww-db)
      (string
-      "SELECT datetime(time, 'localtime') as time, value from wikizet where UUID IN ("
+      "SELECT strftime('%Y-%m-%d-%H-%M', time, 'localtime') as time, value, uuid from wikizet where UUID IN ("
       "SELECT UUID from wikizet WHERE value is '#"
       gid "') and VALUE like '>%' ORDER by strftime('%s', time) DESC;")))
 
   (each id addr
-    (org (string "*" (id "time") "*: "))
-    (org (string (fmtmsg (string/slice (id "value") 1 -1)) "\n\n"))))
+    (org (string "*"
+                 (string
+                  "[" (string/slice (id "UUID") 0 8) "] ")
+                 (id "time")
+                 "*: "))
+    (org (string
+          (fmtmsg (string/slice (id "value") 1 -1))
+          "\n\n"))
+    (org (string "references: " (refstr (id "UUID")) "\n\n"))))
 
 (defn page-updates [] (messages (ww-name) "!"))
