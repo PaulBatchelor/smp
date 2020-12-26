@@ -36,3 +36,7 @@
 -	5734d476-0821-46da-ab2d-f7d0770310d6	#0845a2c7-b25b-4af6-89b2-8f87ba171728
 2020-12-23 14:19:00	2eb903ef-b0c4-4b8c-b855-a057bd1d22a9	>some mildly better presentation when display logs. abbreviated UUIDs are visible, and references are avaiable as well. at 60k rows, the query lag is noticeable, but tolerable.
 -	2eb903ef-b0c4-4b8c-b855-a057bd1d22a9	#0845a2c7-b25b-4af6-89b2-8f87ba171728
+2020-12-24 15:16:55	2a6a54ee-9366-4e8e-94ce-ce11b11daacb	>working on some abstractions for #monolith that will make it easier to test out waveforms. trying to make this a daily ritual for a while.
+-	2a6a54ee-9366-4e8e-94ce-ce11b11daacb	#0845a2c7-b25b-4af6-89b2-8f87ba171728
+2020-12-24 16:26:27	add77274-1bf0-47c9-a90a-2740ea6a0d8b	>putting the tcross node in monolith to good use. it's made for wavetables. since it takes in a phasor, I can also apply phase distortion techniques to it as well.
+-	add77274-1bf0-47c9-a90a-2740ea6a0d8b	#0845a2c7-b25b-4af6-89b2-8f87ba171728
