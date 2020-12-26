@@ -8818,3 +8818,26 @@
 -	c602a8f5-d673-4c76-8e54-45169418c1da	#326a9788-a390-4a73-bdde-d386b1841379
 -	c602a8f5-d673-4c76-8e54-45169418c1da	#a8bcdedb-6cc6-49df-835b-9f9cfcd9be95
 -	c602a8f5-d673-4c76-8e54-45169418c1da	#3f14810b-b7bc-4d5b-a106-630665465f94
+-	905ca891-c0ad-4598-a618-8b1b4d913b87	#8447aec3-e546-4ce9-ac85-f193384b9791
+-	19263c9c-8b57-43a5-9bd9-673f2c71d8fd	#8447aec3-e546-4ce9-ac85-f193384b9791
+-	bd869e7a-c9f3-4b41-89ee-ec16ea7173c2	#8447aec3-e546-4ce9-ac85-f193384b9791
+2020-12-26 00:51:43	590f4f3e-dcb5-4595-9666-c920bcf625e8	>this one is very very bright. had to tune the initial oscillator to 100hz just to get a sensible sound.
+-	590f4f3e-dcb5-4595-9666-c920bcf625e8	#326a9788-a390-4a73-bdde-d386b1841379
+-	590f4f3e-dcb5-4595-9666-c920bcf625e8	#905ca891-c0ad-4598-a618-8b1b4d913b87
+-	905ca891-c0ad-4598-a618-8b1b4d913b87	#8a685966-6c36-424a-8a52-b8055e173190
+2020-12-26 00:54:39	eabb024a-b275-4e5e-a493-5f4ff06eba35	>this one sounds like an old school polypulse. like you'd hear on an arcade. very crunchy and bitcrushed.
+-	eabb024a-b275-4e5e-a493-5f4ff06eba35	#326a9788-a390-4a73-bdde-d386b1841379
+-	eabb024a-b275-4e5e-a493-5f4ff06eba35	#19263c9c-8b57-43a5-9bd9-673f2c71d8fd
+-	19263c9c-8b57-43a5-9bd9-673f2c71d8fd	#1d9f3469-5acb-4838-8252-722e19243930
+-	19263c9c-8b57-43a5-9bd9-673f2c71d8fd	#e40e4c1c-8243-49bb-b142-58a231073a4e
+2020-12-26 00:57:02	635022dd-3287-439c-a809-a82d589b3e29	>this waveform perceptually sounds an octave higher, which is why it sounds better pitched lower.
+-	635022dd-3287-439c-a809-a82d589b3e29	#326a9788-a390-4a73-bdde-d386b1841379
+-	635022dd-3287-439c-a809-a82d589b3e29	#905ca891-c0ad-4598-a618-8b1b4d913b87
+-	905ca891-c0ad-4598-a618-8b1b4d913b87	#3eefa2f4-76ce-4c21-b260-6bb579a78d0f
+2020-12-26 01:00:20	8ed66eb0-5b7a-42d0-a189-5b76b7e892b1	>this one, like 19263%, has a lot of crunch, but less of it. buzz perhaps? I'll give it both. I'm making these labels up as I go along.
+-	8ed66eb0-5b7a-42d0-a189-5b76b7e892b1	#326a9788-a390-4a73-bdde-d386b1841379
+-	8ed66eb0-5b7a-42d0-a189-5b76b7e892b1	#bd869e7a-c9f3-4b41-89ee-ec16ea7173c2
+-	bd869e7a-c9f3-4b41-89ee-ec16ea7173c2	#226267aa-9d13-442b-a536-d5a21ea49e1d
+2020-12-26 02:23:26	af8daa13-d688-4deb-8711-c3350fd68ecd	>tried using this granular waveform as a modulation source (LFO), and it had kind of a pulsar effect?
+-	af8daa13-d688-4deb-8711-c3350fd68ecd	#905ca891-c0ad-4598-a618-8b1b4d913b87
+-	af8daa13-d688-4deb-8711-c3350fd68ecd	#326a9788-a390-4a73-bdde-d386b1841379
