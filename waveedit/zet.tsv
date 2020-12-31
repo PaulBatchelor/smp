@@ -1355,3 +1355,8 @@
 2020-12-28 01:03:44	5e9d6483-a105-4e6f-858a-cb26b5cb57c9	>okay. didn't actually get around to doing anything with this today. soon.
 -	5e9d6483-a105-4e6f-858a-cb26b5cb57c9	#1fce70cb-4781-4c48-a765-75ae113899ca
 -	5e9d6483-a105-4e6f-858a-cb26b5cb57c9	#8fd5373f-c805-4369-ae34-f68c3b1aa463
+2020-12-31 18:19:49	412fbc5e-7f90-4dba-9f36-931504b13d9a	>these wavetables alias like crazy if you try to use them like regular wavetables. I've found they sing best at sub-audio frequencies (less than 5hz). in a way, they are more like tiny loops than wavetables.
+-	412fbc5e-7f90-4dba-9f36-931504b13d9a	#1fce70cb-4781-4c48-a765-75ae113899ca
+2020-12-31 18:23:57	2f9c528a-b2c8-4f8b-8200-6ad9af37f476	>they have very interesting textures, that's for sure. it might be interesting to do some morphing with them. alternatively, doing some FFT processing to shave off some of the high spectrums could make them more tonal.
+-	2f9c528a-b2c8-4f8b-8200-6ad9af37f476	#1fce70cb-4781-4c48-a765-75ae113899ca
+-	2f9c528a-b2c8-4f8b-8200-6ad9af37f476	#412fbc5e-7f90-4dba-9f36-931504b13d9a
