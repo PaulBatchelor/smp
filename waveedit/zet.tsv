@@ -1360,3 +1360,19 @@
 2020-12-31 18:23:57	2f9c528a-b2c8-4f8b-8200-6ad9af37f476	>they have very interesting textures, that's for sure. it might be interesting to do some morphing with them. alternatively, doing some FFT processing to shave off some of the high spectrums could make them more tonal.
 -	2f9c528a-b2c8-4f8b-8200-6ad9af37f476	#1fce70cb-4781-4c48-a765-75ae113899ca
 -	2f9c528a-b2c8-4f8b-8200-6ad9af37f476	#412fbc5e-7f90-4dba-9f36-931504b13d9a
+2021-01-03 15:27:25	d1ab84e8-546c-4af2-92d6-9a37c51dbeed	>testing out these 4 random waveforms together with tabmorf. we'll see how it goes.
+-	d1ab84e8-546c-4af2-92d6-9a37c51dbeed	#1fce70cb-4781-4c48-a765-75ae113899ca
+-	d1ab84e8-546c-4af2-92d6-9a37c51dbeed	#0a8ae9e9-d3b0-41cd-8926-bff6b3c49bbb
+-	d1ab84e8-546c-4af2-92d6-9a37c51dbeed	#03cd822c-d801-4050-9c65-c33c9f980e7c
+-	d1ab84e8-546c-4af2-92d6-9a37c51dbeed	#42e62539-7676-4cdd-8be2-88919ace51f1
+-	d1ab84e8-546c-4af2-92d6-9a37c51dbeed	#95c5afd8-b204-4c8d-82a4-6acd093d4e9a
+2021-01-03 15:34:15	e4b6f6eb-11fa-4c06-bb6e-df819d5c44bf	>this is some PWM stuff, but it has an attack so it feels very loopy.
+-	e4b6f6eb-11fa-4c06-bb6e-df819d5c44bf	#1fce70cb-4781-4c48-a765-75ae113899ca
+-	e4b6f6eb-11fa-4c06-bb6e-df819d5c44bf	#95c5afd8-b204-4c8d-82a4-6acd093d4e9a
+-	95c5afd8-b204-4c8d-82a4-6acd093d4e9a	#4f4e4bd7-aa6b-46e4-b488-7a74cac1c65b
+-	95c5afd8-b204-4c8d-82a4-6acd093d4e9a	#8447aec3-e546-4ce9-ac85-f193384b9791
+-	0a8ae9e9-d3b0-41cd-8926-bff6b3c49bbb	#8447aec3-e546-4ce9-ac85-f193384b9791
+-	0a8ae9e9-d3b0-41cd-8926-bff6b3c49bbb	#c4b06684-ea35-4f77-9d20-fd263d062356
+-	03cd822c-d801-4050-9c65-c33c9f980e7c	#8447aec3-e546-4ce9-ac85-f193384b9791
+-	03cd822c-d801-4050-9c65-c33c9f980e7c	#83973cc8-446d-4840-8830-5dccd07c4abe
+-	03cd822c-d801-4050-9c65-c33c9f980e7c	#6084e267-1314-41e5-8dc2-126e4e4d93cf
