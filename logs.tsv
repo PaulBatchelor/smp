@@ -49,3 +49,11 @@
 -	6b757307-22d7-488b-b659-d80bd3501f89	#bd869e7a-c9f3-4b41-89ee-ec16ea7173c2
 2021-01-03 15:23:47	042e7cc8-d9fa-41d5-9d66-12143b5aec9c	>built tabmorf today. testing it out on some random !waveedit waveforms today.
 -	042e7cc8-d9fa-41d5-9d66-12143b5aec9c	#0845a2c7-b25b-4af6-89b2-8f87ba171728
+2021-01-17 03:00:32	7c36c212-7e27-4c77-b74c-20be5dac62ca	>I just made a TODO app today that was a bunch of weewiki commands wrapped in one shell script. It's tempting to do the same here. It would make this system re-usable incase I wanted to start another one of these up again.
+-	7c36c212-7e27-4c77-b74c-20be5dac62ca	#0845a2c7-b25b-4af6-89b2-8f87ba171728
+2021-01-17 03:01:52	b4f8065c-9578-4e4b-a3c4-7719a7e2c5ea	>at some point, I will be extracting and documenting AAS sample packs here. Why they couldn't just supply the WAV files instead of their shit JSON format is beyond me.
+-	b4f8065c-9578-4e4b-a3c4-7719a7e2c5ea	#0845a2c7-b25b-4af6-89b2-8f87ba171728
+2021-01-17 03:02:36	465c3e59-09a0-4d8f-8d30-e41082d2e524	>I feel like it's been a while since I last did anything here. been a busy week. no time for fun and games. maybe tomorrow?
+-	465c3e59-09a0-4d8f-8d30-e41082d2e524	#0845a2c7-b25b-4af6-89b2-8f87ba171728
+2021-01-17 03:03:30	d30f5fb3-742a-4ecb-a52b-cc3be4e911dd	>I really need to make a README for how to use this system. It hasn't even been that long and I'm forgetting the conventions.
+-	d30f5fb3-742a-4ecb-a52b-cc3be4e911dd	#0845a2c7-b25b-4af6-89b2-8f87ba171728
