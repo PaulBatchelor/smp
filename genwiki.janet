@@ -6,6 +6,7 @@
 (ww-clear)
 
 (ww-add-link "index" "index.org")
+(ww-add-link "usage" "usage.org")
 (ww-add-link "akwf" "akwf/akwf.org")
 (ww-add-link "waveedit" "waveedit/waveedit.org")
 (ww-add-link "piezo" "piezo/piezo.org")
