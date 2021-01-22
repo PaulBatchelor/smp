@@ -1,0 +1,31 @@
+#+TITLE: Usage
+How to use this thing.
+
+This is a specially managed weewiki and zet. Careful usage
+is required.
+
+Writing stuff down as I go.
+
+Utilities are stored in the "u" folder. These
+are small shell scripts wrapped around weewiki that
+do specific things.
+
+Most of what happens here is making logs. Do this
+with =u/zsay=.
+
+It is *very* important that you tie whatever is being
+said to *exactly one* group that gets explicitely
+exported. If you don't, the message will get erased. If
+you link more than one, it will get duplicated in the repo.
+
+For general messages, use the =logs= tag.
+
+#+BEGIN_SRC sh
+u/zsay @logs
+#+END_SRC
+
+Logs are also tied to specific sqlar groups.
+
+Be sure to periodically dump the zet with =dumpzet.sh=.
+
+If you don't do this, stuff won't be saved.
