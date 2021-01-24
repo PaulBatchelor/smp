@@ -58,13 +58,31 @@
          "SELECT UUID FROM wikizet where "
          "value is \"" typeflag group "\";")) 0) "UUID"))
 
+
+  (sqlite3/eval
+   (ww-db)
+   (string
+    "CREATE TEMPORARY VIEW trefs as "
+    "SELECT UUID as id, value as ref from wikizet "
+    "where value like '#%';"))
+
   (def addr
     (sqlite3/eval
      (ww-db)
      (string
-      "SELECT strftime('%Y-%m-%d-%H-%M', time, 'localtime') as time, value, uuid from wikizet where UUID IN ("
+      "SELECT "
+      "strftime('%Y-%m-%d-%H-%M', time, 'localtime') as time, "
+      "value, "
+      "substr(UUID, 1, 8) as UUID, "
+      "GROUP_CONCAT(substr(ref, 2, 8)) as refstr "
+      "FROM wikizet "
+      "INNER JOIN trefs "
+      "on wikizet.UUID = trefs.ID "
+      "where UUID IN ("
       "SELECT UUID from wikizet WHERE value is '#"
-      gid "') and VALUE like '>%' ORDER by strftime('%s', time) DESC;")))
+      gid "') and VALUE like '>%' "
+      "GROUP by UUID "
+      "ORDER by strftime('%s', time) DESC;")))
 
   (each id addr
     (org (string "*"
@@ -75,6 +93,9 @@
     (org (string
           (fmtmsg (string/slice (id "value") 1 -1))
           "\n\n"))
-    (org (string "references: " (refstr (id "UUID")) "\n\n"))))
+    (org (string "references: " (id "refstr") "\n\n")))
+
+
+  (sqlite3/eval (ww-db) (string "DROP VIEW trefs")))
 
 (defn page-updates [] (messages (ww-name) "!"))
