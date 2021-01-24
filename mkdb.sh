@@ -6,7 +6,7 @@ function zetit() {
 weewiki janet genwiki.janet
 
 zetit akwf
-zetit aw_2010_wav32
+#zetit aw_2010_wav32
 zetit waveedit
 zetit piezo
 zetit unfa
