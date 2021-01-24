@@ -8841,3 +8841,28 @@
 2020-12-26 02:23:26	af8daa13-d688-4deb-8711-c3350fd68ecd	>tried using this granular waveform as a modulation source (LFO), and it had kind of a pulsar effect?
 -	af8daa13-d688-4deb-8711-c3350fd68ecd	#905ca891-c0ad-4598-a618-8b1b4d913b87
 -	af8daa13-d688-4deb-8711-c3350fd68ecd	#326a9788-a390-4a73-bdde-d386b1841379
+2021-01-24 19:29:02	19d95a2c-0ff0-497a-a1ec-e7b012a7bbd2	>d76ae4 is a very noisy raw waveform. I initially tried it out a 440hz and it was aliasing like crazy. very bright and buzzy at lower frequencies.
+-	19d95a2c-0ff0-497a-a1ec-e7b012a7bbd2	#326a9788-a390-4a73-bdde-d386b1841379
+-	19d95a2c-0ff0-497a-a1ec-e7b012a7bbd2	#d76ae4b1-f637-4ac7-b0b8-c6e7705a5c6f
+-	d76ae4b1-f637-4ac7-b0b8-c6e7705a5c6f	#8a685966-6c36-424a-8a52-b8055e173190
+-	d76ae4b1-f637-4ac7-b0b8-c6e7705a5c6f	#226267aa-9d13-442b-a536-d5a21ea49e1d
+-	d76ae4b1-f637-4ac7-b0b8-c6e7705a5c6f	#8447aec3-e546-4ce9-ac85-f193384b9791
+2021-01-24 19:32:40	96938eab-41e0-4306-b3c6-531484226899	>b7692 is definitely a square wave. If I were to guess, 50% duty cycle. not very interesting tbh.
+-	96938eab-41e0-4306-b3c6-531484226899	#326a9788-a390-4a73-bdde-d386b1841379
+-	96938eab-41e0-4306-b3c6-531484226899	#b76926ff-78e4-4302-a0c9-78ec68be5d9b
+2021-01-24 19:35:12	af43baa8-0b2f-4f0a-99e2-bb407f1e1549	>they call this one a "gapsaw". Probably has to do with what it looks like. It just sounds like a saw wave. Ugh. I'm not feeling inspired looking at these primitive waveforms in isolation.
+-	af43baa8-0b2f-4f0a-99e2-bb407f1e1549	#326a9788-a390-4a73-bdde-d386b1841379
+-	af43baa8-0b2f-4f0a-99e2-bb407f1e1549	#940385f8-1df0-4720-bd47-033c4e36f664
+2021-01-24 19:38:21	de65cb2a-00c9-46d6-afff-62722b09f6bd	>oh this one sounds new. It doesn't have a lot of bottom, but there's some compelling grit in the mid-low areas. I very much want to try putting vibrato and chorusing on it.
+-	de65cb2a-00c9-46d6-afff-62722b09f6bd	#326a9788-a390-4a73-bdde-d386b1841379
+-	de65cb2a-00c9-46d6-afff-62722b09f6bd	#e9081355-fda6-4221-8cfe-205c392d8323
+-	940385f8-1df0-4720-bd47-033c4e36f664	#a2d92677-9980-4933-a4c1-97a0680ff08e
+-	b76926ff-78e4-4302-a0c9-78ec68be5d9b	#a2d92677-9980-4933-a4c1-97a0680ff08e
+-	e9081355-fda6-4221-8cfe-205c392d8323	#83973cc8-446d-4840-8830-5dccd07c4abe
+-	e9081355-fda6-4221-8cfe-205c392d8323	#f4ecb9cc-73f7-4bbf-9e65-ca9ace842e9a
+2021-01-24 19:41:50	e69de4cf-ee08-4d68-93ae-336423d471ca	>I need to rethink how to play with the "classic" waveforms. They kind of need to be tested within themselves. Otherwise... boring.
+-	e69de4cf-ee08-4d68-93ae-336423d471ca	#326a9788-a390-4a73-bdde-d386b1841379
+-	d76ae4b1-f637-4ac7-b0b8-c6e7705a5c6f	#8447aec3-e546-4ce9-ac85-f193384b9791
+-	940385f8-1df0-4720-bd47-033c4e36f664	#8447aec3-e546-4ce9-ac85-f193384b9791
+-	b76926ff-78e4-4302-a0c9-78ec68be5d9b	#8447aec3-e546-4ce9-ac85-f193384b9791
+-	e9081355-fda6-4221-8cfe-205c392d8323	#8447aec3-e546-4ce9-ac85-f193384b9791
