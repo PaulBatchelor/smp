@@ -21,5 +21,7 @@
 
 (defn import []
   (each p pages (ww-add-link
-                 (string page-prefix p)
+                 (if (= p "index")
+                   "aw_2010_wav32"
+                   (string page-prefix p))
                  (string path "/" p ".org"))))

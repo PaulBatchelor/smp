@@ -49,8 +49,9 @@
 
   (string/join str ", "))
 
-(defn messages [group &opt typeflag]
+(defn messages [group &opt typeflag genrefs]
   (default typeflag "@")
+  (default genrefs false)
   (def gid
        (((sqlite3/eval
         (ww-db)
@@ -59,12 +60,13 @@
          "value is \"" typeflag group "\";")) 0) "UUID"))
 
 
-  (sqlite3/eval
-   (ww-db)
-   (string
-    "CREATE TEMPORARY VIEW trefs as "
-    "SELECT UUID as id, value as ref from wikizet "
-    "where value like '#%';"))
+  (if genrefs
+    (sqlite3/eval
+     (ww-db)
+     (string
+      "CREATE TEMPORARY VIEW trefs as "
+      "SELECT UUID as id, value as ref from wikizet "
+      "where value like '#%';")))
 
   (def addr
     (sqlite3/eval
@@ -73,15 +75,19 @@
       "SELECT "
       "strftime('%Y-%m-%d-%H-%M', time, 'localtime') as time, "
       "value, "
-      "substr(UUID, 1, 8) as UUID, "
-      "GROUP_CONCAT(substr(ref, 2, 8)) as refstr "
+      "substr(UUID, 1, 8) as UUID "
+      (if genrefs
+        (string
+         ", GROUP_CONCAT(substr(ref, 2, 8)) as refstr "))
       "FROM wikizet "
-      "INNER JOIN trefs "
-      "on wikizet.UUID = trefs.ID "
+      (if genrefs
+        (string
+         "INNER JOIN trefs "
+         "on wikizet.UUID = trefs.ID "))
       "where UUID IN ("
       "SELECT UUID from wikizet WHERE value is '#"
       gid "') and VALUE like '>%' "
-      "GROUP by UUID "
+      (if genrefs "GROUP by UUID ")
       "ORDER by strftime('%s', time) DESC;")))
 
   (each id addr
@@ -93,9 +99,10 @@
     (org (string
           (fmtmsg (string/slice (id "value") 1 -1))
           "\n\n"))
-    (org (string "references: " (id "refstr") "\n\n")))
+    (if genrefs
+      (org (string "references: " (id "refstr") "\n\n"))))
 
-
-  (sqlite3/eval (ww-db) (string "DROP VIEW trefs")))
+  (if genrefs
+    (sqlite3/eval (ww-db) (string "DROP VIEW trefs"))))
 
 (defn page-updates [] (messages (ww-name) "!"))
