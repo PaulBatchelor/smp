@@ -9,6 +9,7 @@ zetout aw_2010_wav32
 zetout waveedit
 zetout piezo
 zetout unfa
+zetout sh1wf
 
 echo "dumping logs group"
 weewiki zet export logs > logs.tsv

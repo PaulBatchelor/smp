@@ -69,3 +69,18 @@ weewiki zet export foo.sqlar foo/zet.tsv
 #+END_SRC
 
 Add all these files and make a commit.
+
+After that, you'll need to add these entries to the
+=dump_zet.sh= and =mkdb.sh= scripts.
+
+in =dump_zet.sh=, add:
+
+#+BEGIN_SRC sh
+zetout foo
+#+END_SRC
+
+in =mkdb.sh=, add:
+
+#+BEGIN_SRC sh
+zetit foo
+#+END_SRC
