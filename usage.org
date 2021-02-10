@@ -84,3 +84,6 @@ in =mkdb.sh=, add:
 #+BEGIN_SRC sh
 zetit foo
 #+END_SRC
+
+Finally, don't forget to import any wiki pages in the
+=genwiki.janet= script.

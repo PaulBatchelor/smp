@@ -66,3 +66,7 @@
 -	0c0deb55-5996-4d99-a921-a63bfc8d96f9	#0845a2c7-b25b-4af6-89b2-8f87ba171728
 2021-01-24 20:10:22	9f618f4a-1b66-4551-8fcb-99bbe74bbd6f	>yup, big performance improvement disabling !aw_2020_wav32. working off partial segments of the database seems like a design consideration moving forward.
 -	9f618f4a-1b66-4551-8fcb-99bbe74bbd6f	#0845a2c7-b25b-4af6-89b2-8f87ba171728
+2021-02-10 15:11:51	c2bf9c14-92c9-4c83-ad28-e4e2b03bae9d	>disabled the references in the feed pages and re-enabled !aw_2010_wav32. it was not worth the CPU cycles.
+-	c2bf9c14-92c9-4c83-ad28-e4e2b03bae9d	#0845a2c7-b25b-4af6-89b2-8f87ba171728
+2021-02-10 15:12:14	1863b00e-13fd-432f-aad9-afd5e3c5e197	>also, introducing !sh1wf. Found on lines the other day.
+-	1863b00e-13fd-432f-aad9-afd5e3c5e197	#0845a2c7-b25b-4af6-89b2-8f87ba171728

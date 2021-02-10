@@ -1,5 +1,6 @@
 # This file is manually maintained.
 (import aw_2010_wav32/import :as aw)
+(import sh1wf/import :as sh1wf)
 
 (ww-open "a.db")
 (print "Clearing the database.")
@@ -15,6 +16,7 @@
 
 # Architecture Waveforms
 (aw/import)
+(sh1wf/import)
 
 (ww-sync)
 (ww-close)
