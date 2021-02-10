@@ -11,6 +11,7 @@ zetit waveedit
 zetit piezo
 zetit unfa
 zetit sh1wf
+zetit kawaiwf
 
 echo "importing logs"
 weewiki zet import < logs.tsv

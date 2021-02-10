@@ -10,6 +10,7 @@ zetout waveedit
 zetout piezo
 zetout unfa
 zetout sh1wf
+zetout kawaiwf
 
 echo "dumping logs group"
 weewiki zet export logs > logs.tsv
