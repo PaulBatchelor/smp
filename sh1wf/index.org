@@ -1,0 +1,5 @@
+#+TITLE: Roland SH1 waveforms
+Originally from
+[[https://freesound.org/people/altemark/packs/2339/]].
+
+@!(zet/messages "sh1wf.sqlar")!@
