@@ -1,5 +1,4 @@
 #+TITLE: Process
-
 How does one listen to these waveforms and "rate" them?
 
 Will meditate on this.

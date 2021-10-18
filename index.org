@@ -2,16 +2,4 @@
 This is the main landing page for smp, my personal
 catalogue of curated samples.
 
-I'm just getting started, there's not much more to
-say at the moment right now.
-
-Compared to my usual wikis, this one has less automation.
-
-rather than relying on the dump functionality, wikis are
-manually generated. This means that every wikipage has an
-external org file that is tracked via Fossil.
-
-The zettelkasten is going to be interesting. It's exported
-to a TSV file and is going to get big very quickly. It also
-needs to be manually dumped with the script =dump_zet.sh=.
-Will have to rethink this at some point.
+See @!(ref "usage")!@ for getting started.
