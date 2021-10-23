@@ -87,3 +87,20 @@ zetit foo
 
 Finally, don't forget to import any wiki pages in the
 =genwiki.janet= script.
+
+SQLar archives, once imported, don't always need to be
+present. They can be removed (not implemented yet), copied
+again.
+
+To copy a sample database previously imported, use the =copy=
+command. For instance:
+
+#+BEGIN_SRC sh
+weewiki crate copy ~/sqlar/aw_2010_wav32.sqlar a.db
+#+END_SRC
+
+Will transfer the samples over to the smp's database =a.db=.
+
+Unfortunately, there isn't an inverse operation for this
+yet. But if you know the folder samples are in, they can
+be removed using sqlar's =-d= command.
