@@ -12,6 +12,8 @@ zetit piezo
 zetit unfa
 zetit sh1wf
 zetit kawaiwf
+zetit vengeance
+zetit vintage_drums
 
 echo "importing logs"
 weewiki zet import < logs.tsv
