@@ -14,6 +14,7 @@
 (ww-add-link "piezo" "piezo/piezo.org")
 (ww-add-link "logs" "logs.org")
 (ww-add-link "unfa" "unfa/unfa.org")
+(ww-add-link "vintage_drums" "vintage_drums/vintage_drums.org")
 
 (aw/import)
 (sh1wf/import)
