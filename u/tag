@@ -1,0 +1,12 @@
+#!/bin/sh
+if [ "$#" -lt 2 ]
+then
+echo "Usage: $0 UUID TAG"
+fi
+
+UUID=$1
+TAG=@$2
+
+# TODO: check to see if it has already been tagged
+
+weewiki zet link $UUID $TAG

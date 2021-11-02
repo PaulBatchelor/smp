@@ -1,3 +1,4 @@
 #!/bin/sh
 weewiki zet shuffle $* @used |\
+    weewiki zet ergoify |\
     awk -F "\t" '{print substr($2, 0, 8),$3}'

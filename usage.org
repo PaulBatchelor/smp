@@ -5,18 +5,26 @@ This is a specially managed weewiki and zet. Careful usage
 is required.
 
 Writing stuff down as I go.
-
+* Utilities
 Utilities are stored in the "u" folder. These
 are small shell scripts wrapped around weewiki that
 do specific things.
-
+** zsay
 Most of what happens here is making logs. Do this
 with =u/zsay=.
+** cgroups
+Print all the crate items associated with a particular
+group. Will display the filename, as well as the UUID
+in ergo-id format for easier typing.
 
-It is *very* important that you tie whatever is being
-said to *exactly one* group that gets explicitely
-exported. If you don't, the message will get erased. If
-you link more than one, it will get duplicated in the repo.
+Example: print all the items with the USED tag.
+#+BEGIN_SRC sh
+u/cgroups USED
+#+END_SRC
+* Logs
+Logs are short timestamped messages added to the
+zettelkasten. The idea is to take notes about various
+samples and collections.
 
 For general messages, use the =logs= tag.
 
@@ -30,6 +38,14 @@ Be sure to periodically dump the zet with =dumpzet.sh=.
 
 If you don't do this, stuff won't be saved.
 
+It is *very* important that you tie whatever is being
+said to *exactly one* group that gets explicitely
+exported. If you don't, the message will get erased. If
+you link more than one, it will get duplicated in the repo.
+
+What are explicitely exported groups? See the =dump_zet=
+script.
+* Importing new samples
 Importing new samples.
 
 First you need to convert the sample collection into a sqlar
@@ -87,7 +103,7 @@ zetit foo
 
 Finally, don't forget to import any wiki pages in the
 =genwiki.janet= script.
-
+* Copying SQLar archives
 SQLar archives, once imported, don't always need to be
 present. They can be removed (not implemented yet), copied
 again.
@@ -104,3 +120,12 @@ Will transfer the samples over to the smp's database =a.db=.
 Unfortunately, there isn't an inverse operation for this
 yet. But if you know the folder samples are in, they can
 be removed using sqlar's =-d= command.
+* Using a Sample
+When a sample gets used for the first time, it should
+get tagged with the =USED= label via linking:
+
+#+BEGIN_SRC sh
+u/tag UUID USED
+#+END_SRC
+
+This lets me know what samples I have used and have not used.

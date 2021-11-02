@@ -5,5 +5,5 @@ then
     exit
 fi
 
-weewiki zet export $1 | \
+weewiki zet export $1 | weewiki zet ergoify | \
 awk -F '\t' '{if (match($3, "^/")) {print(substr($2, 0, 8), $3)}}'

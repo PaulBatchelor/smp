@@ -1,0 +1,5 @@
+#+TITLE: Vintage Drums
+A big folder of vintage drum samples I've had forever,
+but have never used. Hoping to fix that.
+
+@!(zet/messages "vintage_drums.sqlar")!@
