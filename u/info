@@ -1,0 +1,52 @@
+#!/bin/sh
+
+getinfo () {
+    UUID=$(weewiki zet resolve $1)
+    if [[ ! $? -eq 0 ]]
+    then
+        exit 1
+    fi
+    printf "UUID:\t$UUID\n"
+    printf "ergoID:\tg%s\n" $(weewiki zet ergo $UUID)
+
+    printf "Path:\t"
+    sqlite3 a.db <<EOF
+SELECT substr(value, 2) FROM wikizet where
+UUID is '$UUID' and VALUE like '/%';
+EOF
+
+#     printf "State:\t"
+# 
+#     STATE_UUID=$(sqlite3 a.db <<EOF
+# SELECT substr(value, 9) FROM wikizet where
+# UUID is '$TASK_UUID' and VALUE like '\$state:%';
+# EOF
+# )
+#    sqlite3 a.db <<EOF
+#SELECT substr(value, 2) FROM wikizet where
+#UUID is '$STATE_UUID' and VALUE like '@%';
+#EOF
+
+    TAGS=$(weewiki zet tags $UUID | awk '{printf $0 " "}')
+
+    if [ ! -z "$TAGS" ]
+    then
+        printf "Tags:\t$TAGS\n"
+    fi
+
+    #BLURB=$(getblurb $TASK_UUID)
+
+    #if [ ! -z "$BLURB" ]
+    #then
+    #    printf "Blurb:\t$BLURB\n"
+    #fi
+
+}
+
+if [ "$#" -lt 1 ]
+then
+echo "Usage: $0 UUID"
+exit 1
+fi
+
+getinfo $1
