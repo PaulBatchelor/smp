@@ -3,3 +3,13 @@ This is the main landing page for smp, my personal
 catalogue of curated samples.
 
 See @!(ref "usage")!@ for getting started.
+
+Some sample collections:
+
+[[aw_2010_wav32]]: galbanum architecture waveform collection.
+
+[[akwf]]: Analogue Kid Waveform Collection.
+
+[[vintage_drums]]: A collection of vintage drum samples.
+
+[[vengeance]]: Vengeance EDM sample pack (version 3).

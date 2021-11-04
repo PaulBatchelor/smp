@@ -78,3 +78,5 @@ via Fossil in case something does go wrong. The push and
 pull scripts will appropriately update and sync before doing
 anything potentially bad. Between that and Fossil, the risk
 is close to zero.
+* Messages
+@!(zet/messages "aw_2010_wav32.sqlar")!@
