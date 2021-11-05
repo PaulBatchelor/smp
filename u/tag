@@ -4,9 +4,19 @@ then
 echo "Usage: $0 UUID TAG"
 fi
 
-UUID=$1
-TAG=@$2
 
-# TODO: check to see if it has already been tagged
+UUID=$(weewiki zet resolve $1)
 
-weewiki zet link $UUID $TAG
+if [[ ! $? -eq 0 ]]
+then
+    exit 1
+fi
+
+shift 1
+TAGS=$*
+
+for t in $TAGS
+do
+    # TODO: check to see if it has already been tagged
+    weewiki zet link $UUID @$t
+done
