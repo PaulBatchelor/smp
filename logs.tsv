@@ -80,3 +80,5 @@
 -	faee33c5-4094-42ed-9575-6c370c661b0c	#0845a2c7-b25b-4af6-89b2-8f87ba171728
 2021-11-02 13:22:43	645d9ee3-16ca-46a2-a4f3-1f931c2f2239	>on second thought, are the scripts really that bad? I mean it's not like the shell script could be used outside of the directory. plus, this makes it more decentralized. will push onwards with what I have so far.
 -	645d9ee3-16ca-46a2-a4f3-1f931c2f2239	#0845a2c7-b25b-4af6-89b2-8f87ba171728
+2021-11-05 15:56:57	7c784745-8df0-4c32-b509-7ebc1d914562	>added rpicker. good design pattern to look at moving forward. really solidifies how self-contained scripts are going to be better than a monolithic CLI. Hopefully many more custom SQLite queries in the future.
+-	7c784745-8df0-4c32-b509-7ebc1d914562	#0845a2c7-b25b-4af6-89b2-8f87ba171728

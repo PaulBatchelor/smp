@@ -1,0 +1,30 @@
+#!/bin/sh
+
+if [ "$#" -lt 2 ]
+then
+echo "rpicker: pick N random samples from a group"
+echo "usage: $0 GROUP N"
+exit 1
+fi
+
+GROUP=@$1
+NITEMS=$2
+GROUP_ID=$(weewiki zet resolve $GROUP)
+
+function query() {
+sqlite3 a.db <<EOF
+.mode tabs
+SELECT time, UUID, value from wikizet
+where UUID in (SELECT UUID from wikizet
+WHERE value IS '#' || '$1')
+AND value like "/%.wav"
+ORDER BY RANDOM()
+limit $2
+;
+EOF
+
+}
+
+query $GROUP_ID $NITEMS | \
+    weewiki zet ergoify | \
+    awk -F '\t' '{print substr($2, 1, 9), $3}'
