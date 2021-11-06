@@ -1,0 +1,22 @@
+#!/bin/sh
+
+if [[ ! $? -eq 0 ]]
+then
+    exit 1
+fi
+
+UUID=$(weewiki zet resolve $1)
+
+function query() {
+sqlite3 a.db <<EOF
+SELECT value from wikizet
+WHERE UUID is "$1" AND
+value LIKE "/%"
+LIMIT 1
+;
+EOF
+}
+
+SAMPDIR=tmp
+
+mplayer "$SAMPDIR$(query $UUID)"

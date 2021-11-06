@@ -11,6 +11,11 @@ GROUP=@$1
 NITEMS=$2
 GROUP_ID=$(weewiki zet resolve $GROUP)
 
+if [[ ! $? -eq 0 ]]
+then
+    exit 1
+fi
+
 function query() {
 sqlite3 a.db <<EOF
 .mode tabs
