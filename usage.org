@@ -21,6 +21,13 @@ Example: print all the items with the USED tag.
 #+BEGIN_SRC sh
 u/cgroups USED
 #+END_SRC
+** rpicker
+This is a helpful utility that allows one to randomly pick
+samples from a group.
+
+Note that at the time of writing, this doesn't have an
+ignore group, which would enable choices to include samples
+that haven't been used before (via excluding the USED group).
 * Logs
 Logs are short timestamped messages added to the
 zettelkasten. The idea is to take notes about various
