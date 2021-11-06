@@ -28,6 +28,15 @@ samples from a group.
 Note that at the time of writing, this doesn't have an
 ignore group, which would enable choices to include samples
 that haven't been used before (via excluding the USED group).
+** hist
+The =hist= command provides a nice view of the most recently
+commented samples in a group, and their message history.
+
+#+BEGIN_SRC sh
+u/hist @aw_2010% 10
+#+END_SRC
+
+This one can take a few seconds to load.
 * Logs
 Logs are short timestamped messages added to the
 zettelkasten. The idea is to take notes about various

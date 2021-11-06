@@ -1,0 +1,87 @@
+#!/bin/sh
+
+if [ "$#" -lt 2 ]
+then
+echo "hist: get recent log history of group"
+echo "usage: $0 GROUP N"
+exit 1
+fi
+
+GROUP=@$1
+NITEMS=$2
+GROUP_ID=$(weewiki zet resolve $GROUP)
+
+if [[ ! $? -eq 0 ]]
+then
+    exit 1
+fi
+
+function query() {
+sqlite3 a.db <<EOF
+.mode tabs
+
+CREATE TEMPORARY VIEW gtab AS SELECT UUID FROM
+wikizet where UUID in (SELECT UUID from wikizet
+WHERE value IS '#' || '$1');
+
+-- Crate UUIDs
+--SELECT UUID AS crateid, value AS fname FROM wikizet
+--WHERE UUID in (SELECT UUID from wikizet
+--    WHERE value IS '#' || '$1')
+--    AND value LIKE "/%"
+
+---- Find latest messages, and their links
+--SELECT UUID AS msgid, SUBSTR(value, 2) AS linkid FROM wikizet
+--WHERE UUID in
+--    (SELECT UUID from wikizet
+--    where UUID in (SELECT UUID from wikizet
+--    WHERE value IS '#' || '$1')
+--    AND value like ">%")
+--AND value LIKE '#%'
+--ORDER BY strftime("%s", time) DESC
+
+SELECT fname, cratefiles.id, time, group_concat(msg, '::')
+FROM
+(SELECT time, msgtab.id as msgid, msg, link FROM
+   (SELECT time, UUID AS id, value AS msg FROM
+        wikizet WHERE UUID in gtab AND value like ">%"
+) msgtab
+INNER JOIN (SELECT UUID AS id, substr(value, 2) AS link FROM wikizet
+WHERE value LIKE "#%" and UUID in gtab
+) linktab
+ON msgtab.id = linktab.id) loglinks
+
+INNER JOIN
+
+(SELECT UUID AS id, value AS fname from wikizet
+    WHERE UUID in gtab
+    AND value LIKE "/%"
+
+) cratefiles
+
+ON cratefiles.id = loglinks.link
+
+GROUP BY fname
+ORDER BY strftime("%s", loglinks.time) DESC
+limit $2
+;
+EOF
+
+}
+
+function present () {
+
+    read -r -d '' QUERY <<EOF
+{
+print substr(\$2, 1, 8) ":", \$1
+split(\$4, msg, "::")
+for (m in msg) {
+    print "\t" msg[m]
+}
+}
+EOF
+    awk -F '\t' "$QUERY"
+}
+
+query $GROUP_ID $NITEMS |\
+    weewiki zet ergoify | present

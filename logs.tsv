@@ -84,3 +84,5 @@
 -	7c784745-8df0-4c32-b509-7ebc1d914562	#0845a2c7-b25b-4af6-89b2-8f87ba171728
 2021-11-06 16:06:46	619af6fc-f38e-47f0-8cc1-f9b8b68b0ccd	>adding a play shortcut that would resolve files and then play them in mplayer was a good idea. all I need to do is mount the sqlar via sqlarfs.
 -	619af6fc-f38e-47f0-8cc1-f9b8b68b0ccd	#0845a2c7-b25b-4af6-89b2-8f87ba171728
+2021-11-06 17:52:16	75adf7c5-ec4e-4fbe-b2b1-02383318dca3	>the u/hist utility provides a very nice view of recently logged samples tied to a group. will probably turn it into an HTML view at some point.
+-	75adf7c5-ec4e-4fbe-b2b1-02383318dca3	#0845a2c7-b25b-4af6-89b2-8f87ba171728
