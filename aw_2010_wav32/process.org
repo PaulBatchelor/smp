@@ -2,7 +2,7 @@
 How does one listen to these waveforms and "rate" them?
 
 Will meditate on this.
-* TODO Ways to listen
+* Ways to listen
 ** Preliminaries
 First, some preliminaries:
 
@@ -21,7 +21,7 @@ artifacts, especially with the higher frequencies. Some work
 can be done to supress this. However, I say embrace the
 aliasing where it may appear... it's a part of digital
 identity!
-** The XY Pad: an ideal interface
+** The XY Pad: an ideal interface(?)
 I have found the XY pad to be a very expressive interface
 for sound exploration, and I believe it to be one very
 useful for exploring the timbres of wavetables.
@@ -118,3 +118,5 @@ Add these files to a new SQLar database?
 
 At some point, I may want to write a SQLite script that
 copies files over from one SQLar to another.
+* More Formal Testing and Evaluation
+See @!(ref "wttest")!@, and the =wttest= group.

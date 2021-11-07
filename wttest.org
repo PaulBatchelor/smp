@@ -1,0 +1,82 @@
+#+TITLE: Wavetable Testing
+* Overview
+Stuff tagged with the =wttest= tag are subjected to
+forms of wavetable testing and evaluation.
+
+How does one evaluate the characteristic of a wavetable?
+For me, mechanical non-audio processes like waveforms and
+magnitude spectrum plots are only so useful. I'd like
+to try and use my ears and listen.
+* Buzz Morphing Oscillator
+To evaluate the sonic qualities of a waveform, you really
+want to be as no-frills as possible. I reach for a 
+table lookup oscillator play a steady-pitch. I've found it's
+help to have a reference wavetable to play against. A
+band-limited buzzwave is good because it has a pretty rich
+spectrum without being too abrasive.
+
+The code below implements a test oscillator for wavetables
+using monolith. It morphs between a wavetable crate ID =wt=
+and a buzzwave at a fixed pitch =nn= (in MIDI).
+
+#+BEGIN_SRC scheme
+(define (testwt nn wt)
+  (let ((ftl (monolith:nextfree 0)))
+    (ftlist-new)
+    (regset zz ftl)
+
+    (ftlist-append
+      (lambda () (gen_sinesum (ftnew 8192) "0.2 0.2 0.2 0.2 0.2"))
+      (reggetf ftl))
+    (ftlist-append
+      (lambda () (monft wt))
+      (reggetf ftl))
+
+
+      (phasor (mtof nn) 0)
+    (tabmorf zz (expmap (flipper (phasor 0.3 0)) -1)
+             (reggetf ftl))
+    (mul zz 0.3)
+    (regclr ftl)))
+#+END_SRC
+
+I've been listening to wavetables at 3 octaves currently.
+Pitched at 24 (p24), 36 (p36), and 48 (p48). Wavetable
+spectrums usually have a sweet spot, or they only dont
+sound like crap at very specific frequency regions.
+* FM testing
+Seeing how wavetables behave in the context of FM becomes
+a bit more unpredictable. So this process is still evolving.
+
+The core oscillator used is a classic FM pair. The idea would
+be to mix and match classic sine tables with the current
+wavetable. To keep things simple, a 1:1 ratio will be used
+mostly. Modulation index will be routinely adjusted just
+to see how the timbre changes.
+
+Here's a test FM oscillator:
+
+The gist is: create an FM oscillator pair, with sine
+as carrier and wt as modulator, and slowly drive the
+modulation index up and down. The thing to listen for
+hear is the behavior of spectrum evolution.
+
+Note that the tables *might* have to match still.
+
+#+NAME: top
+#+BEGIN_SRC scheme
+(define (testfm wt nn car mod mi)
+  (fmpair2
+    (mtof nn)
+    (param car) (param mod)
+    (scale (expmap (flipper (phasor 0.3 0)) -1) 0 mi)
+    (param 0.0)
+    (lambda () (gen_sine (ftnew 2048)))
+    (lambda () (monft wt)))
+  (mul zz 0.5))
+#+END_SRC
+
+If I wanted to test a wavetable with this patch using
+a pitch 36 with a C:M ratio of 1:2, and a max mod index
+of 6, I'd declare it as =fm36,126=. triplet values can
+be a hex for a range of 0-15.
