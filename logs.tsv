@@ -86,3 +86,6 @@
 -	619af6fc-f38e-47f0-8cc1-f9b8b68b0ccd	#0845a2c7-b25b-4af6-89b2-8f87ba171728
 2021-11-06 17:52:16	75adf7c5-ec4e-4fbe-b2b1-02383318dca3	>the u/hist utility provides a very nice view of recently logged samples tied to a group. will probably turn it into an HTML view at some point.
 -	75adf7c5-ec4e-4fbe-b2b1-02383318dca3	#0845a2c7-b25b-4af6-89b2-8f87ba171728
+2021-11-08 14:44:29	9ae06967-3afd-430e-849a-6f6dfa1813fc	>now that formal wavetable testing is happening with !wttest, it might be cool to write programs that generate standardized sound files for critical listening. Would make it much more streamlined.
+-	9ae06967-3afd-430e-849a-6f6dfa1813fc	#0845a2c7-b25b-4af6-89b2-8f87ba171728
+-	9ae06967-3afd-430e-849a-6f6dfa1813fc	#65a5a428-0d93-4846-bda8-124b5353638b

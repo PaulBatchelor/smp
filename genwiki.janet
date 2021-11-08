@@ -16,6 +16,7 @@
 (ww-add-link "unfa" "unfa/unfa.org")
 (ww-add-link "wttest" "wttest.org")
 (ww-add-link "vintage_drums" "vintage_drums/vintage_drums.org")
+(ww-add-link "brainstorm" "brainstorm.org")
 
 (aw/import)
 (sh1wf/import)

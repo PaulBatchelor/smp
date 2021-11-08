@@ -1,0 +1,5 @@
+#+TITLE: brainstorm
+Various brainstorming ideas get collected here. They are
+linked to the =brainstorm= group.
+
+TODO: put a feed here.
