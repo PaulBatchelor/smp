@@ -1,5 +1,6 @@
 #+TITLE: Architecture Waveform Stats
-* The 10 Most Recently Commented Samples
+Stats page for @!(ref "aw_2010_wav32")!@.
+* Recently Commented Samples
 @!(stats/stats "aw_2010%" 10)!@
-* Last 50 Messages
-@!(zet/messages "aw_2010_wav32.sqlar" "@" true 50)!@
+* Recent Messages
+@!(zet/messages "aw_2010_wav32.sqlar" "@" true 40)!@

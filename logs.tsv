@@ -89,3 +89,5 @@
 2021-11-08 14:44:29	9ae06967-3afd-430e-849a-6f6dfa1813fc	>now that formal wavetable testing is happening with !wttest, it might be cool to write programs that generate standardized sound files for critical listening. Would make it much more streamlined.
 -	9ae06967-3afd-430e-849a-6f6dfa1813fc	#0845a2c7-b25b-4af6-89b2-8f87ba171728
 -	9ae06967-3afd-430e-849a-6f6dfa1813fc	#65a5a428-0d93-4846-bda8-124b5353638b
+2021-11-09 18:55:36	50b71eaa-32ad-405b-8aee-727e67262c71	>added some stats functionality today and wow this thing is starting to resemble usefulness
+-	50b71eaa-32ad-405b-8aee-727e67262c71	#0845a2c7-b25b-4af6-89b2-8f87ba171728

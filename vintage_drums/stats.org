@@ -1,3 +1,6 @@
-Will be a stats page for vintage drums at some point.
+#+TITLE: Vintage Drums Stats
+Stats page for @!(ref "vintage_drums")!@.
 * Most Recently Commented Samples
 @!(stats/stats "vintage_drums%" 5)!@
+* Recent Messages
+@!(zet/messages "vintage_drums.sqlar" "@" true 40)!@
