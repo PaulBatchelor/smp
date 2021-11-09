@@ -49,7 +49,7 @@
 
   (string/join str ", "))
 
-(defn messages [group &opt typeflag genrefs]
+(defn messages [group &opt typeflag genrefs limit]
   (default typeflag "@")
   (default genrefs false)
   (def gid
@@ -58,7 +58,6 @@
         (string
          "SELECT UUID FROM wikizet where "
          "value is \"" typeflag group "\";")) 0) "UUID"))
-
 
   (if genrefs
     (sqlite3/eval
@@ -88,7 +87,10 @@
       "SELECT UUID from wikizet WHERE value is '#"
       gid "') and VALUE like '>%' "
       (if genrefs "GROUP by UUID ")
-      "ORDER by strftime('%s', time) DESC;")))
+      "ORDER by strftime('%s', time) DESC "
+      (if limit (string "LIMIT " limit))
+      ";"
+)))
 
   (each id addr
     (org (string "*"

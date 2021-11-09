@@ -1,6 +1,6 @@
-(def page-prefix "kawaiwf_")
-(def path "kawaiwf")
-(def pages @["index"])
+(def page-prefix "vintage_drums_")
+(def path "vintage_drums")
+(def pages @["index" "stats"])
 
 (defn import []
   (each p pages (ww-add-link

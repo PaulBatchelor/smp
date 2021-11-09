@@ -17,7 +17,9 @@
     "series"
     "spectral"
     "uhf"
-    "xy"])
+    "xy"
+    "stats"
+   ])
 
 (defn import []
   (each p pages (ww-add-link

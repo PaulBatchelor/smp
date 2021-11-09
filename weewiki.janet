@@ -86,3 +86,4 @@
 ))
 
 (import zet)
+(import stats)

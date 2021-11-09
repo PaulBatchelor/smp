@@ -2,6 +2,7 @@
 (import aw_2010_wav32/import :as aw)
 (import sh1wf/import :as sh1wf)
 (import kawaiwf/import :as kawaiwf)
+(import vintage_drums/import :as vintage_drums)
 
 (ww-open "a.db")
 (print "Clearing the database.")
@@ -15,12 +16,13 @@
 (ww-add-link "logs" "logs.org")
 (ww-add-link "unfa" "unfa/unfa.org")
 (ww-add-link "wttest" "wttest.org")
-(ww-add-link "vintage_drums" "vintage_drums/vintage_drums.org")
 (ww-add-link "brainstorm" "brainstorm.org")
+(ww-add-link "wiki_index" "wiki_index.org")
 
 (aw/import)
 (sh1wf/import)
 (kawaiwf/import)
+(vintage_drums/import)
 
 (ww-sync)
 (ww-close)
