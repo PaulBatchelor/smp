@@ -1,0 +1,36 @@
+#!/bin/sh
+
+if [ "$#" -lt 1 ]
+then
+echo "findused: find sample from USED group"
+echo "usage: $0 search_pattern"
+exit 1
+fi
+
+PAT=$1
+GROUP_ID=$(weewiki zet resolve "@USED")
+
+if [[ ! $? -eq 0 ]]
+then
+    exit 1
+fi
+
+function query() {
+sqlite3 a.db <<EOF
+.mode tabs
+select time, UUID, value FROM wikizet
+WHERE value LIKE "/%" AND value
+LIKE '$1'
+AND UUID in (SELECT UUID from wikizet where
+value like
+'#' || '$2'
+)
+
+;
+EOF
+
+}
+
+query $PAT $GROUP_ID | \
+    weewiki zet ergoify | \
+    awk -F '\t' '{print substr($2, 1, 9), $3}'
