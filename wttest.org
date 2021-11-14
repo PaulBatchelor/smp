@@ -86,9 +86,36 @@ of @!(ref "sndkit")!@.
 
 #+NAME: wttest.lil
 #+BEGIN_SRC lil :tangle wttest.lil
+<<wttest>>
+#+END_SRC
+
+#+NAME: wttest
+#+BEGIN_SRC lil
 func wttfm {wt nn c m i} {
     gensine [tabnew 8192]
     cratewav $wt
+    mtof $nn
+    param $c
+    param $m
+    phasor 0.3 0
+    flipper zz
+    expmap zz -1
+    scale zz 0 $i
+    param 0
+    fmpair2 zz zz zz zz zz zz zz zz
+    mul zz 0.5
+}
+#+END_SRC
+
+Note that =wt= is ignored here, but it is included here
+to match the =wttfm= function argument structure. This
+makes the =fmtest= utility much easier to work with.
+
+#+NAME: wttest
+#+BEGIN_SRC lil
+func wttfm_ref {wt nn c m i} {
+    gensine [tabnew 8192]
+    dup
     mtof $nn
     param $c
     param $m

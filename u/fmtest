@@ -1,0 +1,33 @@
+#!./sndkit
+
+if [expr [count $argv] < 5] {
+    error "Usage: fmtest wavetable pitch car mod index [out.wav]"
+}
+
+opendb
+
+source wttest.lil
+
+set wt [index $argv 0]
+set nn [index $argv 1]
+set car [index $argv 2]
+set mod [index $argv 3]
+set index [index $argv 4]
+
+set wtfun wttfm
+
+if not [strcmp $wt "-"] {
+    set wtfun wttfm_ref
+    set wt "ref"
+}
+
+set wav "$wt"_"$nn"_"$car""$mod""$index"".wav"
+
+if [expr [count $argv] >= 6] {
+    set wav [index $argv 5]
+}
+
+$wtfun $wt $nn $car $mod $index
+wavout zz $wav
+
+computes 10
