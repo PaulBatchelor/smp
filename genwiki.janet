@@ -18,6 +18,7 @@
 (ww-add-link "wttest" "wttest.org")
 (ww-add-link "brainstorm" "brainstorm.org")
 (ww-add-link "wiki_index" "wiki_index.org")
+(ww-add-link "labels" "labels.org")
 
 (aw/import)
 (sh1wf/import)
