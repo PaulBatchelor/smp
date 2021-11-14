@@ -80,3 +80,24 @@ If I wanted to test a wavetable with this patch using
 a pitch 36 with a C:M ratio of 1:2, and a max mod index
 of 6, I'd declare it as =fm36,126=. triplet values can
 be a hex for a range of 0-15.
+* LIL implementations
+Here is an implementation in LIL, using the local version
+of @!(ref "sndkit")!@.
+
+#+NAME: wttest.lil
+#+BEGIN_SRC lil :tangle wttest.lil
+func wttfm {wt nn c m i} {
+    gensine [tabnew 8192]
+    cratewav $wt
+    mtof $nn
+    param $c
+    param $m
+    phasor 0.3 0
+    flipper zz
+    expmap zz -1
+    scale zz 0 $i
+    param 0
+    fmpair2 zz zz zz zz zz zz zz zz
+    mul zz 0.5
+}
+#+END_SRC

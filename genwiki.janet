@@ -19,6 +19,7 @@
 (ww-add-link "brainstorm" "brainstorm.org")
 (ww-add-link "wiki_index" "wiki_index.org")
 (ww-add-link "labels" "labels.org")
+(ww-add-link "sndkit" "sndkit.org")
 
 (aw/import)
 (sh1wf/import)

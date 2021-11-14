@@ -1,0 +1,25 @@
+#+TITLE: sndkit
+This zet contains a local copy of =sndkit=,
+with a few specialized functions added to work with
+the samples discussed here.
+* Buildling
+You should have sndkit installed already.
+
+Build it all with =make=.
+* LIL functions
+** Opendb
+Usage: opendb [filename]
+
+This will open up the SQLite database containing the zet.
+If no filename is given, it will use "a.db". This database
+gets implicitely used by some of the new functions added here,
+so be sure to call this before running.
+** Cratewav
+Usage: cratewav UUID
+
+This will load a sample into a sndkit table from the crate,
+given the UUID. The full ID does not need to be provided,
+only enough digits so that it is unique. The ego-id format
+is also supported here (the suffix must start with 'g').
+
+
