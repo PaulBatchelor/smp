@@ -1,0 +1,31 @@
+
+#!/bin/sh
+
+if [ "$#" -lt 1 ]
+then
+echo "sampcount: get number of samples from GROUP"
+echo "usage: $0 GROUP"
+exit 1
+fi
+
+GROUP=@$1
+GROUP_ID=$(weewiki zet resolve $GROUP)
+
+if [[ ! $? -eq 0 ]]
+then
+    exit 1
+fi
+
+function query() {
+sqlite3 a.db <<EOF
+SELECT count(*) FROM wikizet
+WHERE value LIKE "/%" AND
+UUID in (
+SELECT UUID from wikizet
+WHERE value LIKE "#$1"
+)
+;
+EOF
+}
+
+query $GROUP_ID

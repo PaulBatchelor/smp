@@ -99,3 +99,5 @@
 -	0c905008-7490-413e-a2e5-e117f124e047	#0845a2c7-b25b-4af6-89b2-8f87ba171728
 2021-11-14 16:40:02	640adca1-308d-4b5b-8a90-72e11db6fb6b	>lots of new stuff being made today in an effort to make some local testing utilities like in !wttest. !sndkit is now included with this distribution. I'm also toying the idea with making little subroutines and programs in LIL to make it easier to programatically test samples.
 -	640adca1-308d-4b5b-8a90-72e11db6fb6b	#0845a2c7-b25b-4af6-89b2-8f87ba171728
+2021-11-15 02:19:26	68c8cc7c-d591-4df0-93ef-85ff090c2c3e	>added sampcount: a utility that will return the number of samples linked to a particular group.
+-	68c8cc7c-d591-4df0-93ef-85ff090c2c3e	#0845a2c7-b25b-4af6-89b2-8f87ba171728
