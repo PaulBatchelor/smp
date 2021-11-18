@@ -48,7 +48,10 @@ LIMIT %d;
 (sqlite3/eval (ww-db) "DROP VIEW gtab")
 
 (each val q
-  (org (string "** " (string/slice (val "id") 0 8) "\n"))
+  (org (string
+        "** "
+        "g" (ergo/hex-to-ergo (string/slice (val "id") 0 8))
+        "\n"))
   (org (string "*Filename:*"))
   (print (string " " (val "fname")))
   (org "\n")

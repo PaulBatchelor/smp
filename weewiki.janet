@@ -86,5 +86,6 @@
 ))
 
 (import zet)
+(import ergo)
 (import stats)
 (import labels)
