@@ -101,3 +101,5 @@
 -	640adca1-308d-4b5b-8a90-72e11db6fb6b	#0845a2c7-b25b-4af6-89b2-8f87ba171728
 2021-11-15 02:19:26	68c8cc7c-d591-4df0-93ef-85ff090c2c3e	>added sampcount: a utility that will return the number of samples linked to a particular group.
 -	68c8cc7c-d591-4df0-93ef-85ff090c2c3e	#0845a2c7-b25b-4af6-89b2-8f87ba171728
+2021-11-18 14:55:44	9d9f6620-324e-42b7-a258-f272a7f9259c	>made it possible to export the wiki components to HTML, so you could use a local http server to browse a cached copy of the zet. this makes it faster to browse. also, althttpd is really neat :)
+-	9d9f6620-324e-42b7-a258-f272a7f9259c	#0845a2c7-b25b-4af6-89b2-8f87ba171728

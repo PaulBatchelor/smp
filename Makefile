@@ -19,3 +19,17 @@ sndkit: $(OBJ)
 clean:
 	$(RM) sndkit
 	$(RM) $(OBJ)
+	$(RM) althttpd
+
+export:
+	mkdir -p _site/smp
+	rsync -rvt css _site/
+	weewiki export
+
+althttpd: althttpd.c
+	$(CC) -O2 $< -o $@
+
+listen: althttpd
+	@echo "Listening on 8080"
+	@echo "Navigate to http://localhost:8080/smp"
+	./althttpd --port 8080 --root $(PWD)/_site/
