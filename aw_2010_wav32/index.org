@@ -1,9 +1,4 @@
 #+TITLE: Architecture Waveform Collection 2010
-* What What is this?
-This is an import of my first initial attempts of
-curating and documenting the Architecture waveform
-Collection using Weewiki. Working from this, it will
-gradually end up in the zet.
 * What is this?
 This is the Architecture Waveform collection, from
 [[https://www.galbanum.com/products/architecturewaveforms2010/][Galbanum waveforms]].
@@ -13,6 +8,10 @@ these waveforms. The goal here is to provide something I can
 look back on in future works.
 
 Work in progress, naturally.
+* Stats
+See: @!(ref "aw_stats")!@. (If this is
+being dynamically generated, this may take a minute to
+load.)
 * Waveform Notes
 @!(ref "aw_add" "add")!@.
 

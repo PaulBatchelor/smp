@@ -6,10 +6,14 @@ See @!(ref "usage")!@ for getting started.
 
 Some sample collections:
 
-[[aw_2010_wav32]]: galbanum architecture waveform collection.
+@!(ref "aw_2010_wav32")!@:
+galbanum architecture waveform collection.
 
-[[akwf]]: Analogue Kid Waveform Collection.
+@!(ref "akwf")!@:
+Analogue Kid Waveform Collection.
 
-[[vintage_drums]]: A collection of vintage drum samples.
+@!(ref "vintage_drums")!@:
+A collection of vintage drum samples.
 
-[[vengeance]]: Vengeance EDM sample pack (version 3).
+@!(ref "vengeance")!@:
+Vengeance EDM sample pack (version 3).
