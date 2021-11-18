@@ -12,12 +12,17 @@
             "where key is \""name"\") as doiexist;")))
   (= ((x 0) "doiexist") 1))
 
-(defn pglink (link)
+(defn pglink (page &opt target)
+  (var link "")
+  (if (nil? target)
+    (set link page)
+    (set link (string page "#" target)))
   (cond
-    (= link "index")
+    (= page "index")
     (string webroot "/")
-    (pgexists? link)
+    (pgexists? page)
     (string webroot "/" link) "#"))
+
 
 (defn refstr (link &opt name)
   (if (nil? name)
@@ -29,13 +34,14 @@
      name
      "]]")))
 
-(defn ref (link &opt name)
+(defn ref (link &opt name target)
+  (default target nil)
   (if (nil? name)
     (org (string "[[" (pglink link) "][" link "]]"))
     (org
      (string
       "[["
-      (pglink link)
+      (pglink link target)
       "]["
       name
       "]]"))))
@@ -85,7 +91,13 @@
 ``
 ))
 
+(defn marker [id &opt msg]
+  (default msg "")
+  (prin (string "<a id=\"" id "\">" msg "</a>")))
+
 (import zet)
 (import ergo)
 (import stats)
 (import labels)
+
+(import aw_2010_wav32/import :as aw_2010)

@@ -21,9 +21,15 @@
     "stats"
    ])
 
+(defn mkpage [p]
+  (if (= p "index")
+    "aw_2010_wav32"
+    (string page-prefix p)))
+
 (defn import []
   (each p pages (ww-add-link
                  (if (= p "index")
                    "aw_2010_wav32"
                    (string page-prefix p))
                  (string path "/" p ".org"))))
+

@@ -1,6 +1,17 @@
 #+TITLE: Architecture Waveform Stats
 Stats page for @!(ref "aw_2010_wav32")!@.
+
+* Navigation
+@!(ref (aw_2010/mkpage "stats")
+       "Recently Commented Samples"
+       "comments")!@
+
+@!(ref (aw_2010/mkpage "stats")
+       "Recent Messages"
+       "messages")!@
 * Recently Commented Samples
-@!(stats/stats "aw_2010%" 10)!@
+@!(marker "comments")!@
+@!(stats/stats "aw_2010%" 15)!@
 * Recent Messages
+@!(marker "messages")!@
 @!(zet/messages "aw_2010_wav32.sqlar" "@" true 40)!@
