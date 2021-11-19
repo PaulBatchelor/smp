@@ -141,6 +141,71 @@ static int sqlar_loadwav_db(sk_core *core,
     return 0;
 }
 
+
+/* note: pstmt needs to be finalized after calling */
+
+static const char *uuid_to_filename(sqlite3 *db,
+                                    sqlite3_stmt **pstmt,
+                                    const char *idstr)
+{
+    int rc;
+    const char *filename;
+    int count;
+    char *ergo;
+
+    db = smp_db();
+
+    if (db == NULL) return NULL;
+
+    sqlite3_prepare_v2(db,
+                       "SELECT value, COUNT(DISTINCT uuid) "
+                       "from wikizet "
+                       "WHERE uuid LIKE ?1 || \"%\" "
+                       "AND value LIKE \"/%\";",
+                       -1, pstmt, NULL);
+
+    ergo = NULL;
+    if (idstr[0] == 'g') {
+        size_t sz;
+        /* 'g' is truncated, so N - 1 */
+        sz = strlen(idstr) - 1;
+        ergo = malloc(sz + 1);
+        ergo[sz] = '\0';
+        ergo_to_hex(&idstr[1], sz, ergo);
+
+        sqlite3_bind_text(*pstmt, 1, ergo, -1, NULL);
+    } else {
+        sqlite3_bind_text(*pstmt, 1, idstr, -1, NULL);
+    }
+
+    rc = sqlite3_step(*pstmt);
+
+    if (rc != SQLITE_ROW) {
+        fprintf(stderr, "%s\n", sqlite3_errmsg(db));
+        sqlite3_finalize(*pstmt);
+        return NULL;
+    }
+
+    count = sqlite3_column_int(*pstmt, 1);
+
+    if (count < 1) {
+        fprintf(stderr, "Could not resolve id %s\n", idstr);
+        sqlite3_finalize(*pstmt);
+        if (ergo != NULL) free(ergo);
+        return NULL;
+    } else if (count > 1) {
+        fprintf(stderr, "id pattern %s not unique.\n", idstr);
+        sqlite3_finalize(*pstmt);
+        if (ergo != NULL) free(ergo);
+        return NULL;
+    }
+
+    filename = (const char *)sqlite3_column_text(*pstmt, 0);
+    if (ergo != NULL) free(ergo);
+
+    return filename;
+}
+
 static int cratewav(sk_core *core, const char *idstr)
 {
     int rc;
@@ -197,6 +262,7 @@ static int cratewav(sk_core *core, const char *idstr)
     }
 
     filename = (const char *)sqlite3_column_text(stmt, 0);
+    if (ergo != NULL) free(ergo);
 
     rc = sqlar_loadwav_db(core, db, &filename[1], &ft);
 
@@ -208,7 +274,6 @@ static int cratewav(sk_core *core, const char *idstr)
 
     sqlite3_finalize(stmt);
 
-    if (ergo != NULL) free(ergo);
 
     sk_core_table_push(core, ft);
     return 0;
@@ -243,8 +308,47 @@ static lil_value_t opendb(lil_t lil, size_t argc, lil_value_t *argv)
     return NULL;
 }
 
+static lil_value_t l_extract(lil_t lil,
+                             size_t argc,
+                             lil_value_t *argv)
+{
+    int rc;
+    const char *UUID;
+    const char *fname;
+    const char *path;
+    sqlite3 *db;
+    sqlite3_stmt *stmt;
+    int size;
+    char *data;
+    FILE *fp;
+
+    UUID = lil_to_string(argv[0]);
+    fname = lil_to_string(argv[1]);
+
+    db = smp_db();
+
+    if (db == NULL) return NULL; /* TODO: louder error */
+
+    path = uuid_to_filename(db, &stmt, UUID);
+
+    if (path == NULL) return NULL; /* TODO: louder error */
+
+    rc = sqlar_extract_to_buffer_db(db, &path[1], &data, &size);
+
+    sqlite3_finalize(stmt);
+    if (rc != SQLITE_OK) return NULL; /* TODO: louder error */
+
+
+    fp = fopen(fname, "w");
+    fwrite(data, size, 1, fp);
+    fclose(fp);
+    free(data);
+    return NULL;
+}
+
 void load_smp(lil_t lil)
 {
     lil_register(lil, "opendb", opendb);
     lil_register(lil, "cratewav", l_cratewav);
+    lil_register(lil, "extract", l_extract);
 }

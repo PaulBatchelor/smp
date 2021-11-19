@@ -1,0 +1,12 @@
+#!./sndkit
+
+if [expr [count $argv] < 2] {
+    error "Usage: extract UUID filename"
+}
+
+opendb
+
+set UUID [index $argv 0]
+set filename [index $argv 1]
+
+extract $UUID $filename

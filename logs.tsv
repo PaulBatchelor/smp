@@ -103,3 +103,5 @@
 -	68c8cc7c-d591-4df0-93ef-85ff090c2c3e	#0845a2c7-b25b-4af6-89b2-8f87ba171728
 2021-11-18 14:55:44	9d9f6620-324e-42b7-a258-f272a7f9259c	>made it possible to export the wiki components to HTML, so you could use a local http server to browse a cached copy of the zet. this makes it faster to browse. also, althttpd is really neat :)
 -	9d9f6620-324e-42b7-a258-f272a7f9259c	#0845a2c7-b25b-4af6-89b2-8f87ba171728
+2021-11-19 19:51:39	d66c0c08-2892-4c83-8d81-d704e55820e7	>the use of uncompress in the SQLar spec is a headache. I ended up having to write C code just to extract files for something that could have nearly have been all done using SQLite CLI and standard shell script tools.
+-	d66c0c08-2892-4c83-8d81-d704e55820e7	#0845a2c7-b25b-4af6-89b2-8f87ba171728
