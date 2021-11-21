@@ -1,0 +1,33 @@
+#!./sndkit
+
+if [expr [count $argv] < 4] {
+    error "Usage: pstest wavetable nn freq bw \oout.wav\c"
+}
+
+opendb
+
+set wt [index $argv 0]
+set nn [index $argv 1]
+set freq [index $argv 2]
+set bw [index $argv 3]
+
+set wav "pstest_""$wt"_"$nn"_"$freq"_"$bw"".wav"
+
+if [expr [count $argv] >= 5] {
+    set wav [index $argv 4]
+}
+
+tabnew 65536
+mags [cratewav $wt]
+param $freq
+param $bw
+padsynth zz zz zz zz
+mtof $nn
+mul zz [expr 1 / $freq]
+param 0
+oscf zz zz zz
+mul zz 0.5
+
+wavout zz $wav
+
+computes 10

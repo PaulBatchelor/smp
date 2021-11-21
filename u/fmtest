@@ -1,7 +1,7 @@
 #!./sndkit
 
 if [expr [count $argv] < 5] {
-    error "Usage: fmtest wavetable pitch car mod index [out.wav]"
+    error "Usage: fmtest wavetable pitch car mod index \oout.wav\c"
 }
 
 opendb

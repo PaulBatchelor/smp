@@ -107,3 +107,5 @@
 -	d66c0c08-2892-4c83-8d81-d704e55820e7	#0845a2c7-b25b-4af6-89b2-8f87ba171728
 2021-11-21 11:47:00	24fb1808-f4d9-49fc-b70a-90540a861454	>I'm finding myself want to append samples and files to SQLar files, and update the entries. There is no good way to do that right now.
 -	24fb1808-f4d9-49fc-b70a-90540a861454	#0845a2c7-b25b-4af6-89b2-8f87ba171728
+2021-11-21 15:24:42	b5e22cb2-dac9-4e9b-a7a9-4e900e75eeff	>getting an initial implementation of padsynth working with sndkit, so I've added a tester called pstest which allows wavetables to be turned into padsynth timbres.
+-	b5e22cb2-dac9-4e9b-a7a9-4e900e75eeff	#0845a2c7-b25b-4af6-89b2-8f87ba171728

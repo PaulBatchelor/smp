@@ -13,6 +13,7 @@ zetout sh1wf
 zetout kawaiwf
 zetout vengeance
 zetout vintage_drums
+zetout soundfonts
 
 echo "dumping logs group"
 weewiki zet export logs > logs.tsv
