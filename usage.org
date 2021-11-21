@@ -81,7 +81,7 @@ the directory where the sqlar archive is located, not where
 the smp db is located. Then run:
 
 #+BEGIN_SRC sh
-weewiki crate import PATH_TO_SMP foo.sqlar
+weewiki crate import PATH_TO_SMP/a.db foo.sqlar
 #+END_SRC
 
 See if the import worked with:
@@ -97,7 +97,7 @@ From there, it needs to be exported to a TSV file, so
 it can be managed in source control.
 
 #+BEGIN_SRC sh
-weewiki zet export foo.sqlar foo/zet.tsv
+weewiki zet export foo.sqlar > foo/zet.tsv
 #+END_SRC
 
 Add all these files and make a commit.
