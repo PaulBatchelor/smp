@@ -105,3 +105,5 @@
 -	9d9f6620-324e-42b7-a258-f272a7f9259c	#0845a2c7-b25b-4af6-89b2-8f87ba171728
 2021-11-19 19:51:39	d66c0c08-2892-4c83-8d81-d704e55820e7	>the use of uncompress in the SQLar spec is a headache. I ended up having to write C code just to extract files for something that could have nearly have been all done using SQLite CLI and standard shell script tools.
 -	d66c0c08-2892-4c83-8d81-d704e55820e7	#0845a2c7-b25b-4af6-89b2-8f87ba171728
+2021-11-21 11:47:00	24fb1808-f4d9-49fc-b70a-90540a861454	>I'm finding myself want to append samples and files to SQLar files, and update the entries. There is no good way to do that right now.
+-	24fb1808-f4d9-49fc-b70a-90540a861454	#0845a2c7-b25b-4af6-89b2-8f87ba171728
