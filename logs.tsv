@@ -109,3 +109,5 @@
 -	24fb1808-f4d9-49fc-b70a-90540a861454	#0845a2c7-b25b-4af6-89b2-8f87ba171728
 2021-11-21 15:24:42	b5e22cb2-dac9-4e9b-a7a9-4e900e75eeff	>getting an initial implementation of padsynth working with sndkit, so I've added a tester called pstest which allows wavetables to be turned into padsynth timbres.
 -	b5e22cb2-dac9-4e9b-a7a9-4e900e75eeff	#0845a2c7-b25b-4af6-89b2-8f87ba171728
+2021-11-21 15:55:21	a7c9b45d-05fa-4a63-b1aa-7971bcbc8617	>created pswt utility for quickly generated padsynth wavetables from spectrum of smaller wavetables
+-	a7c9b45d-05fa-4a63-b1aa-7971bcbc8617	#0845a2c7-b25b-4af6-89b2-8f87ba171728

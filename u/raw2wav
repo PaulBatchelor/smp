@@ -1,0 +1,11 @@
+#!/bin/sh
+
+if [ "$#" -lt 1 ]
+then
+    echo "Usage: $0 file.raw"
+    exit 1
+fi
+
+filename=${1%.raw}
+
+sox -t raw -r 44100 -c 1 -e floating-point -b 32 $1 $filename.wav

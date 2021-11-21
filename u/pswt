@@ -1,0 +1,24 @@
+#!./sndkit
+
+if [expr [count $argv] < 3] {
+    error "Usage: pswt wavetable freq bw \oout.wav\c"
+}
+
+opendb
+
+set wt [index $argv 0]
+set freq [index $argv 1]
+set bw [index $argv 2]
+
+set wav "pswt_""$wt"_"$freq"_"$bw"".raw"
+
+if [expr [count $argv] >= 4] {
+    set wav [index $argv 3]
+}
+
+tabnew 65536
+mags [cratewav $wt]
+param $freq
+param $bw
+padsynth zz zz zz zz
+tabdump zz $wav
