@@ -14,6 +14,3 @@ Analogue Kid Waveform Collection.
 
 @!(ref "vintage_drums")!@:
 A collection of vintage drum samples.
-
-@!(ref "vengeance")!@:
-Vengeance EDM sample pack (version 3).
