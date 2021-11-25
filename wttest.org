@@ -80,6 +80,18 @@ If I wanted to test a wavetable with this patch using
 a pitch 36 with a C:M ratio of 1:2, and a max mod index
 of 6, I'd declare it as =fm36,126=. triplet values can
 be a hex for a range of 0-15.
+* Padsynth testing
+As it turns out, wavetables make for great inputs
+for the padsynth algorithm! So we're going to be
+experimenting with those for a little while.
+
+The utility =pstest= can be used to generate files
+with the following parameters, note number, base
+frequency, and bandwidth.
+
+It is typical practice to prepend messages related
+to testing the wavetable with the pstest utility
+with: pstestNN,FREQ,BW.
 * LIL implementations
 Here is an implementation in LIL, using the local version
 of @!(ref "sndkit")!@.

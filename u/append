@@ -1,0 +1,41 @@
+#!/bin/sh
+
+if [ "$#" -lt 2 ]
+then
+echo "rpicker: appends a sample a pre-existing SQLar archive"
+echo "usage: $0 SQLar file"
+exit 1
+fi
+
+SQLARFILE=$1
+FILE=$2
+
+GROUPNAME=$(basename $SQLARFILE)
+GROUPNAME=${GROUPNAME%.sqlar}
+CRATEFILE="$GROUPNAME/$FILE"
+
+GROUPID=$(weewiki zet resolve @$(basename $SQLARFILE))
+if [[ ! $? -eq 0 ]]
+then
+    exit 1
+fi
+
+function renamefile() {
+sqlite3 $1 <<EOF
+UPDATE sqlar SET name="$3" WHERE
+NAME IS "$2"
+;
+EOF
+}
+
+function mkentry() {
+sqlite3 a.db <<EOF
+INSERT INTO wikizet
+;
+EOF
+}
+
+sqlar $SQLARFILE $FILE
+renamefile $SQLARFILE $FILE $CRATEFILE
+UUID=$(weewiki zet mkfile $CRATEFILE)
+weewiki zet link $UUID $GROUPID
