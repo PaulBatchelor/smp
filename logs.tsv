@@ -111,3 +111,5 @@
 -	b5e22cb2-dac9-4e9b-a7a9-4e900e75eeff	#0845a2c7-b25b-4af6-89b2-8f87ba171728
 2021-11-21 15:55:21	a7c9b45d-05fa-4a63-b1aa-7971bcbc8617	>created pswt utility for quickly generated padsynth wavetables from spectrum of smaller wavetables
 -	a7c9b45d-05fa-4a63-b1aa-7971bcbc8617	#0845a2c7-b25b-4af6-89b2-8f87ba171728
+2021-11-25 18:55:05	fa91d02a-ba84-464a-808e-e4d401a2409a	>the append utility will append a file to an existing SQLar archive, and create a new file entry in the zet.
+-	fa91d02a-ba84-464a-808e-e4d401a2409a	#0845a2c7-b25b-4af6-89b2-8f87ba171728
