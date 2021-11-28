@@ -3,6 +3,7 @@
 (import sh1wf/import :as sh1wf)
 (import kawaiwf/import :as kawaiwf)
 (import vintage_drums/import :as vintage_drums)
+(import shapes/import :as shapes)
 
 (ww-open "a.db")
 (print "Clearing the database.")
@@ -25,6 +26,7 @@
 (sh1wf/import)
 (kawaiwf/import)
 (vintage_drums/import)
+(shapes/import)
 
 (ww-sync)
 (ww-close)

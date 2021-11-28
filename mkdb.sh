@@ -16,6 +16,7 @@ zetit vengeance
 zetit vintage_drums
 zetit soundfonts
 zetit pswt
+zetit shapes
 
 echo "importing logs"
 weewiki zet import < logs.tsv
